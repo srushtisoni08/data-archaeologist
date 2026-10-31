@@ -1,0 +1,98 @@
+{
+  "column_matches": [
+    {
+      "source_dataset": "ds_001",
+      "source_column": "customer_id",
+      "target_dataset": "ds_002",
+      "target_column": "client_ref",
+      "relationship_type": "semantic_match",
+      "confidence": 0.678,
+      "evidence": {
+        "name": 0.286,
+        "type": 1.0,
+        "distribution": 0.771,
+        "semantic": 0.652
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "created_at",
+      "target_dataset": "ds_002",
+      "target_column": "date",
+      "relationship_type": "semantic_match",
+      "confidence": 0.678,
+      "evidence": {
+        "name": 0.429,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.764
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "total_spent",
+      "target_dataset": "ds_002",
+      "target_column": "amount",
+      "relationship_type": "semantic_match",
+      "confidence": 0.643,
+      "evidence": {
+        "name": 0.235,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.773
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    }
+  ],
+  "relationships": [
+    {
+      "source_dataset": "ds_001",
+      "source_column": "customer_id",
+      "target_dataset": "ds_002",
+      "target_column": "client_ref",
+      "relationship_type": "possible_foreign_key",
+      "cardinality": "one_to_many",
+      "confidence": 0.73,
+      "evidence": {
+        "referential_coverage": 0.75,
+        "parent_uniqueness": 1.0,
+        "parent_distinct_values": 3,
+        "child_rows": 4,
+        "orphan_values": 1,
+        "orphan_examples": [
+          "104"
+        ],
+        "name_similarity": 0.286,
+        "type_compatible": true
+      },
+      "status": "inferred",
+      "needs_review": true
+    }
+  ]
+}

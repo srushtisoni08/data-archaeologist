@@ -1,5 +1,5 @@
 import json
-from app.config import PROFILES
+from app.config import PROFILES, STORAGE
 
 
 def next_dataset_id() -> str:
@@ -17,3 +17,12 @@ def load_profile(dataset_id: str) -> dict | None:
 
 def list_profiles() -> list[dict]:
     return [json.loads(p.read_text()) for p in sorted(PROFILES.glob("ds_*.json"))]
+
+
+def save_json(name: str, data) -> None:
+    (STORAGE / f"{name}.json").write_text(json.dumps(data, indent=2, default=str))
+
+
+def load_json(name: str, default=None):
+    p = STORAGE / f"{name}.json"
+    return json.loads(p.read_text()) if p.exists() else default
