@@ -1,0 +1,133 @@
+{
+  "dataset_id": "ds_002",
+  "filename": "transactions.csv",
+  "stored_path": "D:\\automation\\backend\\storage\\originals\\ds_002_transactions.csv",
+  "size_bytes": 102,
+  "sha256": "c9bcaf1bc0714bb18e34f6144f617756b4984b6be8b389ea834c9d8dc1d9d8ca",
+  "format": "csv",
+  "encoding": "ascii",
+  "delimiter": ",",
+  "row_count": 4,
+  "column_count": 3,
+  "columns": [
+    {
+      "name": "client_ref",
+      "semantic_type": "identifier",
+      "semantic_confidence": 0.8,
+      "dtype": "integer",
+      "row_count": 4,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 3,
+      "duplicate_count": 1,
+      "unique_ratio": 0.75,
+      "cardinality": "high",
+      "top_values": {
+        "101": 2,
+        "102": 1,
+        "104": 1
+      },
+      "top_patterns": {
+        "9": 4
+      },
+      "min": 101,
+      "max": 104,
+      "mean": 102.0,
+      "std": 1.4142,
+      "skew": 1.414,
+      "extreme_outliers": 0,
+      "distribution": "skewed"
+    },
+    {
+      "name": "amount",
+      "semantic_type": "currency",
+      "semantic_confidence": 0.7,
+      "dtype": "integer",
+      "row_count": 4,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 4,
+      "duplicate_count": 0,
+      "unique_ratio": 1.0,
+      "cardinality": "unique",
+      "top_values": {
+        "500": 1,
+        "900": 1,
+        "300": 1,
+        "150": 1
+      },
+      "top_patterns": {
+        "9": 4
+      },
+      "min": 150,
+      "max": 900,
+      "mean": 462.5,
+      "std": 325.0,
+      "skew": 0.951,
+      "extreme_outliers": 0,
+      "distribution": "roughly_symmetric"
+    },
+    {
+      "name": "date",
+      "semantic_type": "phone",
+      "semantic_confidence": 1.0,
+      "dtype": "string",
+      "row_count": 4,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 4,
+      "duplicate_count": 0,
+      "unique_ratio": 1.0,
+      "cardinality": "unique",
+      "top_values": {
+        "2025-01-02": 1,
+        "2025-01-03": 1,
+        "2025-01-05": 1,
+        "2025-01-06": 1
+      },
+      "top_patterns": {
+        "9-9-9": 4
+      },
+      "min_length": 10,
+      "max_length": 10
+    }
+  ],
+  "sample": [
+    {
+      "client_ref": "101",
+      "amount": "500",
+      "date": "2025-01-02"
+    },
+    {
+      "client_ref": "102",
+      "amount": "900",
+      "date": "2025-01-03"
+    },
+    {
+      "client_ref": "101",
+      "amount": "300",
+      "date": "2025-01-05"
+    },
+    {
+      "client_ref": "104",
+      "amount": "150",
+      "date": "2025-01-06"
+    }
+  ],
+  "fingerprint": {
+    "schema_hash": "cde27b2a371658d5",
+    "duplicate_rows": 0,
+    "candidate_keys": [
+      "amount",
+      "date"
+    ],
+    "semantic_summary": {
+      "identifier": 1,
+      "currency": 1,
+      "phone": 1
+    },
+    "quality_score": 100.0,
+    "quality_issues": []
+  },
+  "ingestion_status": "completed"
+}
