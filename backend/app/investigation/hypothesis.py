@@ -58,7 +58,7 @@ def open_questions(hyps: list[dict]) -> list[str]:
         d = h.get("details") or {}
         if h["type"] == "foreign_key" and h["status"] == "untested":
             q.append(f"Untested: {h['claim']}")
-        elif h["type"] == "foreign_key" and d.get("orphan_count"):
+        elif h["type"] == "foreign_key" and d.get("orphan_count") and "(one_to_one)" not in h["claim"]:
             if d["orphans_found_elsewhere"]:
                 x = d["orphans_found_elsewhere"][0]
                 q.append(f"Which file is the authoritative parent for {d['target']}? "
