@@ -2,8 +2,8 @@
   "dataset_id": "ds_001",
   "filename": "customers.csv",
   "stored_path": "D:\\automation\\backend\\storage\\originals\\ds_001_customers.csv",
-  "size_bytes": 25468,
-  "sha256": "76dcf2090112bc53ee11e66b876436fb6698f276c60010c16b81cddf3bec5728",
+  "size_bytes": 25447,
+  "sha256": "f1cff6e5e3192e03f2314ada2ce52d9f1893358ff3beecd45ae88f81a6ffe7e2",
   "format": "csv",
   "encoding": "ascii",
   "delimiter": ",",
@@ -48,16 +48,16 @@
       "row_count": 300,
       "null_count": 0,
       "null_pct": 0.0,
-      "unique_count": 280,
-      "duplicate_count": 20,
-      "unique_ratio": 0.9333,
+      "unique_count": 278,
+      "duplicate_count": 22,
+      "unique_ratio": 0.9267,
       "cardinality": "high",
       "top_values": {
-        "Swati Das": 3,
-        "Aditya Deshmukh": 3,
-        "Varun Gandhi": 3,
-        "Gaurav Rao": 2,
-        "Gaurav Modi": 2
+        "Divya Kapoor": 3,
+        "Karan Iyer": 2,
+        "Kavya Deshmukh": 2,
+        "Tanvi Roy": 2,
+        "Bhavna Mehta": 2
       },
       "top_patterns": {
         "Aa Aa": 300
@@ -78,11 +78,11 @@
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "sneha.shah1001@mail.com": 1,
-        "rahul.sen1002@mail.com": 1,
-        "meera.gandhi1003@mail.com": 1,
-        "gaurav.rao1004@mail.com": 1,
-        "asha.thakkar1005@mail.com": 1
+        "manish.parekh1001@mail.com": 1,
+        "rahul.iyer1002@mail.com": 1,
+        "priya.kulkarni1003@mail.com": 1,
+        "komal.mehta1004@mail.com": 1,
+        "ekta.mehta1005@mail.com": 1
       },
       "top_patterns": {
         "a.a9@a.a": 300
@@ -103,11 +103,11 @@
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "+91 9896233790": 1,
-        "+91 9193349856": 1,
-        "+91 9642621108": 1,
-        "+91 9336696312": 1,
-        "+91 9849621470": 1
+        "+91 9523938499": 1,
+        "+91 9725763863": 1,
+        "+91 9549008934": 1,
+        "+91 9987825707": 1,
+        "+91 9719659571": 1
       },
       "top_patterns": {
         "+9 9": 300
@@ -128,11 +128,11 @@
       "unique_ratio": 0.0267,
       "cardinality": "low",
       "top_values": {
-        "Delhi": 44,
-        "Bengaluru": 40,
+        "Ahmedabad": 48,
+        "Mumbai": 40,
+        "Rajkot": 40,
         "Surat": 39,
-        "Pune": 38,
-        "Vadodara": 38
+        "Vadodara": 37
       },
       "top_patterns": {
         "Aa": 300
@@ -148,23 +148,23 @@
       "row_count": 300,
       "null_count": 0,
       "null_pct": 0.0,
-      "unique_count": 248,
-      "duplicate_count": 52,
-      "unique_ratio": 0.8267,
+      "unique_count": 239,
+      "duplicate_count": 61,
+      "unique_ratio": 0.7967,
       "cardinality": "high",
       "top_values": {
-        "2022-04-04": 3,
-        "2023-03-12": 3,
-        "2023-04-27": 3,
-        "2023-03-01": 3,
-        "2022-12-15": 2
+        "2022-05-13": 3,
+        "2023-04-13": 3,
+        "2023-09-21": 3,
+        "2022-09-29": 3,
+        "2023-07-15": 3
       },
       "top_patterns": {
         "9-9-9": 300
       },
       "invalid_dates": 0,
       "min": "2022-01-02 00:00:00",
-      "max": "2023-11-30 00:00:00"
+      "max": "2023-11-27 00:00:00"
     },
     {
       "name": "total_spent",
@@ -179,20 +179,20 @@
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "1154.89": 1,
-        "197.5": 1,
-        "1034.25": 1,
-        "1427.04": 1,
-        "1425.46": 1
+        "4115.31": 1,
+        "1112.76": 1,
+        "499.03": 1,
+        "3171.6": 1,
+        "4882.46": 1
       },
       "top_patterns": {
         "9.9": 300
       },
-      "min": 64.04,
-      "max": 4983.33,
-      "mean": 2382.1892,
-      "std": 1414.1306,
-      "skew": 0.17,
+      "min": 51.15,
+      "max": 4949.86,
+      "mean": 2437.6007,
+      "std": 1487.696,
+      "skew": 0.075,
       "extreme_outliers": 0,
       "distribution": "roughly_symmetric"
     }
@@ -200,48 +200,48 @@
   "sample": [
     {
       "customer_id": "1001",
-      "full_name": "Sneha Shah",
-      "email": "sneha.shah1001@mail.com",
-      "phone": "+91 9896233790",
-      "city": "Mumbai",
-      "created_at": "2022-09-08",
-      "total_spent": "1154.89"
+      "full_name": "Manish Parekh",
+      "email": "manish.parekh1001@mail.com",
+      "phone": "+91 9523938499",
+      "city": "Ahmedabad",
+      "created_at": "2022-03-16",
+      "total_spent": "4115.31"
     },
     {
       "customer_id": "1002",
-      "full_name": "Rahul Sen",
-      "email": "rahul.sen1002@mail.com",
-      "phone": "+91 9193349856",
-      "city": "Delhi",
-      "created_at": "2022-02-02",
-      "total_spent": "197.5"
+      "full_name": "Rahul Iyer",
+      "email": "rahul.iyer1002@mail.com",
+      "phone": "+91 9725763863",
+      "city": "Ahmedabad",
+      "created_at": "2023-06-04",
+      "total_spent": "1112.76"
     },
     {
       "customer_id": "1003",
-      "full_name": "Meera Gandhi",
-      "email": "meera.gandhi1003@mail.com",
-      "phone": "+91 9642621108",
-      "city": "Ahmedabad",
-      "created_at": "2023-07-29",
-      "total_spent": "1034.25"
+      "full_name": "Priya Kulkarni",
+      "email": "priya.kulkarni1003@mail.com",
+      "phone": "+91 9549008934",
+      "city": "Surat",
+      "created_at": "2022-09-04",
+      "total_spent": "499.03"
     },
     {
       "customer_id": "1004",
-      "full_name": "Gaurav Rao",
-      "email": "gaurav.rao1004@mail.com",
-      "phone": "+91 9336696312",
-      "city": "Bengaluru",
-      "created_at": "2023-08-27",
-      "total_spent": "1427.04"
+      "full_name": "Komal Mehta",
+      "email": "komal.mehta1004@mail.com",
+      "phone": "+91 9987825707",
+      "city": "Surat",
+      "created_at": "2022-08-17",
+      "total_spent": "3171.6"
     },
     {
       "customer_id": "1005",
-      "full_name": "Asha Thakkar",
-      "email": "asha.thakkar1005@mail.com",
-      "phone": "+91 9849621470",
+      "full_name": "Ekta Mehta",
+      "email": "ekta.mehta1005@mail.com",
+      "phone": "+91 9719659571",
       "city": "Delhi",
-      "created_at": "2022-12-15",
-      "total_spent": "1425.46"
+      "created_at": "2022-02-20",
+      "total_spent": "4882.46"
     }
   ],
   "fingerprint": {
@@ -254,13 +254,13 @@
       "total_spent"
     ],
     "semantic_summary": {
-      "phone": 1,
-      "geo_location": 1,
       "identifier": 1,
-      "date": 1,
+      "currency": 1,
       "email": 1,
-      "person_name": 1,
-      "currency": 1
+      "geo_location": 1,
+      "phone": 1,
+      "date": 1,
+      "person_name": 1
     },
     "quality_score": 100.0,
     "quality_issues": []

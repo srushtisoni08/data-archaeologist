@@ -30,35 +30,12 @@
       "target_dataset": "ds_002",
       "target_column": "phone",
       "relationship_type": "semantic_match",
-      "confidence": 0.993,
+      "confidence": 0.995,
       "evidence": {
         "name": 1.0,
         "type": 1.0,
         "distribution": 0.989,
-        "semantic": 0.987
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "created_at",
-      "target_dataset": "ds_002",
-      "target_column": "created_at",
-      "relationship_type": "semantic_match",
-      "confidence": 0.993,
-      "evidence": {
-        "name": 1.0,
-        "type": 1.0,
-        "distribution": 0.984,
-        "semantic": 0.991
+        "semantic": 0.993
       },
       "weights": {
         "name": 0.2,
@@ -76,12 +53,35 @@
       "target_dataset": "ds_002",
       "target_column": "city",
       "relationship_type": "semantic_match",
-      "confidence": 0.992,
+      "confidence": 0.993,
       "evidence": {
         "name": 1.0,
         "type": 1.0,
         "distribution": 0.999,
-        "semantic": 0.978
+        "semantic": 0.98
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "created_at",
+      "target_dataset": "ds_002",
+      "target_column": "created_at",
+      "relationship_type": "semantic_match",
+      "confidence": 0.992,
+      "evidence": {
+        "name": 1.0,
+        "type": 1.0,
+        "distribution": 0.984,
+        "semantic": 0.989
       },
       "weights": {
         "name": 0.2,
@@ -99,59 +99,12 @@
       "target_dataset": "ds_002",
       "target_column": "full_name",
       "relationship_type": "semantic_match",
-      "confidence": 0.99,
+      "confidence": 0.984,
       "evidence": {
         "name": 1.0,
         "type": 1.0,
-        "distribution": 0.999,
-        "semantic": 0.973
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "email",
-      "target_dataset": "ds_002",
-      "target_column": "email",
-      "relationship_type": "semantic_match",
-      "confidence": 0.951,
-      "evidence": {
-        "name": 1.0,
-        "type": 1.0,
-        "distribution": 0.989,
-        "semantic": 0.868
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
-      "source_dataset": "ds_004",
-      "source_column": "order_id",
-      "target_dataset": "ds_009",
-      "target_column": "order_no",
-      "relationship_type": "semantic_match",
-      "confidence": 0.947,
-      "evidence": {
-        "name": 0.75,
-        "type": 1.0,
-        "distribution": 1.0,
-        "semantic": 0.84,
-        "overlap": 1.0
+        "distribution": 0.994,
+        "semantic": 0.958
       },
       "weights": {
         "name": 0.2,
@@ -169,12 +122,131 @@
       "target_dataset": "ds_002",
       "target_column": "total_spent",
       "relationship_type": "semantic_match",
-      "confidence": 0.946,
+      "confidence": 0.956,
       "evidence": {
         "name": 1.0,
         "type": 1.0,
-        "distribution": 0.803,
-        "semantic": 0.987
+        "distribution": 0.825,
+        "semantic": 1.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "email",
+      "target_dataset": "ds_002",
+      "target_column": "email",
+      "relationship_type": "semantic_match",
+      "confidence": 0.944,
+      "evidence": {
+        "name": 1.0,
+        "type": 1.0,
+        "distribution": 0.989,
+        "semantic": 0.847
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_004",
+      "source_column": "item_no",
+      "target_dataset": "ds_006",
+      "target_column": "product_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.9,
+      "evidence": {
+        "name": 0.353,
+        "type": 1.0,
+        "distribution": 0.769,
+        "semantic": 0.69,
+        "overlap": 1.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_004",
+      "source_column": "order_id",
+      "target_dataset": "ds_007",
+      "target_column": "orig_order",
+      "relationship_type": "semantic_match",
+      "confidence": 0.9,
+      "evidence": {
+        "name": 0.556,
+        "type": 1.0,
+        "distribution": 0.992,
+        "semantic": 0.784,
+        "overlap": 1.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_004",
+      "source_column": "item_no",
+      "target_dataset": "ds_008",
+      "target_column": "item_code",
+      "relationship_type": "semantic_match",
+      "confidence": 0.9,
+      "evidence": {
+        "name": 0.5,
+        "type": 1.0,
+        "distribution": 0.769,
+        "semantic": 0.832,
+        "overlap": 1.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_004",
+      "source_column": "order_id",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.9,
+      "evidence": {
+        "name": 0.857,
+        "type": 1.0,
+        "distribution": 1.0,
+        "semantic": 0.73,
+        "overlap": 1.0
       },
       "weights": {
         "name": 0.2,
@@ -188,16 +260,40 @@
     },
     {
       "source_dataset": "ds_006",
-      "source_column": "supplier_ref",
+      "source_column": "product_id",
+      "target_dataset": "ds_008",
+      "target_column": "item_code",
+      "relationship_type": "semantic_match",
+      "confidence": 0.9,
+      "evidence": {
+        "name": 0.316,
+        "type": 1.0,
+        "distribution": 1.0,
+        "semantic": 0.744,
+        "overlap": 1.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_006",
+      "source_column": "vendor_id",
       "target_dataset": "ds_010",
       "target_column": "supplier_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.929,
+      "confidence": 0.9,
       "evidence": {
-        "name": 0.783,
+        "name": 0.5,
         "type": 1.0,
         "distribution": 0.812,
-        "semantic": 0.85,
+        "semantic": 0.848,
         "overlap": 1.0
       },
       "weights": {
@@ -214,14 +310,14 @@
       "source_dataset": "ds_004",
       "source_column": "order_id",
       "target_dataset": "ds_005",
-      "target_column": "order_ref",
+      "target_column": "ref_order",
       "relationship_type": "semantic_match",
-      "confidence": 0.918,
+      "confidence": 0.896,
       "evidence": {
         "name": 0.588,
         "type": 1.0,
         "distribution": 0.947,
-        "semantic": 0.829,
+        "semantic": 0.802,
         "overlap": 0.992
       },
       "weights": {
@@ -235,89 +331,17 @@
       "needs_review": false
     },
     {
-      "source_dataset": "ds_005",
-      "source_column": "order_ref",
-      "target_dataset": "ds_007",
-      "target_column": "ord_ref",
-      "relationship_type": "semantic_match",
-      "confidence": 0.894,
-      "evidence": {
-        "name": 0.875,
-        "type": 1.0,
-        "distribution": 0.934,
-        "semantic": 0.659,
-        "overlap": 0.948
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
-      "source_dataset": "ds_004",
-      "source_column": "order_id",
-      "target_dataset": "ds_007",
-      "target_column": "ord_ref",
-      "relationship_type": "semantic_match",
-      "confidence": 0.872,
-      "evidence": {
-        "name": 0.533,
-        "type": 1.0,
-        "distribution": 0.992,
-        "semantic": 0.541,
-        "overlap": 1.0
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
-      "source_dataset": "ds_005",
-      "source_column": "order_ref",
-      "target_dataset": "ds_009",
-      "target_column": "order_no",
-      "relationship_type": "semantic_match",
-      "confidence": 0.855,
-      "evidence": {
-        "name": 0.588,
-        "type": 1.0,
-        "distribution": 0.902,
-        "semantic": 0.758,
-        "overlap": 0.902
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
       "source_dataset": "ds_002",
       "source_column": "customer_id",
       "target_dataset": "ds_004",
-      "target_column": "client_ref",
+      "target_column": "buyer_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.813,
+      "confidence": 0.881,
       "evidence": {
-        "name": 0.286,
+        "name": 0.632,
         "type": 1.0,
-        "distribution": 0.831,
-        "semantic": 0.565,
+        "distribution": 0.829,
+        "semantic": 0.707,
         "overlap": 0.962
       },
       "weights": {
@@ -331,18 +355,18 @@
       "needs_review": false
     },
     {
-      "source_dataset": "ds_007",
-      "source_column": "ord_ref",
-      "target_dataset": "ds_009",
-      "target_column": "order_no",
+      "source_dataset": "ds_005",
+      "source_column": "ref_order",
+      "target_dataset": "ds_007",
+      "target_column": "orig_order",
       "relationship_type": "semantic_match",
-      "confidence": 0.797,
+      "confidence": 0.857,
       "evidence": {
-        "name": 0.533,
+        "name": 0.737,
         "type": 1.0,
-        "distribution": 0.931,
-        "semantic": 0.501,
-        "overlap": 0.879
+        "distribution": 0.916,
+        "semantic": 0.769,
+        "overlap": 0.914
       },
       "weights": {
         "name": 0.2,
@@ -352,21 +376,45 @@
       },
       "used_embeddings": true,
       "status": "inferred",
-      "needs_review": true
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_005",
+      "source_column": "ref_order",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.854,
+      "evidence": {
+        "name": 0.4,
+        "type": 1.0,
+        "distribution": 0.905,
+        "semantic": 0.611,
+        "overlap": 0.909
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
     },
     {
       "source_dataset": "ds_001",
       "source_column": "customer_id",
       "target_dataset": "ds_004",
-      "target_column": "client_ref",
+      "target_column": "buyer_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.779,
+      "confidence": 0.843,
       "evidence": {
-        "name": 0.286,
+        "name": 0.632,
         "type": 1.0,
-        "distribution": 0.801,
-        "semantic": 0.565,
-        "overlap": 0.903
+        "distribution": 0.792,
+        "semantic": 0.707,
+        "overlap": 0.887
       },
       "weights": {
         "name": 0.2,
@@ -376,7 +424,31 @@
       },
       "used_embeddings": true,
       "status": "inferred",
-      "needs_review": true
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_007",
+      "source_column": "orig_order",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.822,
+      "evidence": {
+        "name": 0.5,
+        "type": 1.0,
+        "distribution": 0.914,
+        "semantic": 0.727,
+        "overlap": 0.845
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": false
     },
     {
       "source_dataset": "ds_005",
@@ -384,35 +456,12 @@
       "target_dataset": "ds_009",
       "target_column": "shipped_on",
       "relationship_type": "semantic_match",
-      "confidence": 0.762,
+      "confidence": 0.757,
       "evidence": {
         "name": 0.588,
         "type": 1.0,
-        "distribution": 0.917,
-        "semantic": 0.613
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "full_name",
-      "target_dataset": "ds_003",
-      "target_column": "name",
-      "relationship_type": "semantic_match",
-      "confidence": 0.724,
-      "evidence": {
-        "name": 0.615,
-        "type": 1.0,
-        "distribution": 0.521,
-        "semantic": 0.774
+        "distribution": 0.902,
+        "semantic": 0.611
       },
       "weights": {
         "name": 0.2,
@@ -430,12 +479,12 @@
       "target_dataset": "ds_003",
       "target_column": "name",
       "relationship_type": "semantic_match",
-      "confidence": 0.724,
+      "confidence": 0.743,
       "evidence": {
         "name": 0.615,
         "type": 1.0,
-        "distribution": 0.52,
-        "semantic": 0.774
+        "distribution": 0.614,
+        "semantic": 0.761
       },
       "weights": {
         "name": 0.2,
@@ -453,12 +502,58 @@
       "target_dataset": "ds_009",
       "target_column": "shipped_on",
       "relationship_type": "semantic_match",
-      "confidence": 0.709,
+      "confidence": 0.717,
       "evidence": {
         "name": 0.2,
         "type": 1.0,
-        "distribution": 0.875,
+        "distribution": 0.877,
+        "semantic": 0.736
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "full_name",
+      "target_dataset": "ds_003",
+      "target_column": "name",
+      "relationship_type": "semantic_match",
+      "confidence": 0.716,
+      "evidence": {
+        "name": 0.615,
+        "type": 1.0,
+        "distribution": 0.569,
         "semantic": 0.715
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "email",
+      "target_dataset": "ds_003",
+      "target_column": "email_address",
+      "relationship_type": "semantic_match",
+      "confidence": 0.702,
+      "evidence": {
+        "name": 0.556,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.759
       },
       "weights": {
         "name": 0.2,
@@ -476,35 +571,12 @@
       "target_dataset": "ds_005",
       "target_column": "paid_on",
       "relationship_type": "semantic_match",
-      "confidence": 0.703,
+      "confidence": 0.702,
       "evidence": {
         "name": 0.235,
         "type": 1.0,
-        "distribution": 0.923,
-        "semantic": 0.643
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_005",
-      "source_column": "amount",
-      "target_dataset": "ds_006",
-      "target_column": "unit_price",
-      "relationship_type": "semantic_match",
-      "confidence": 0.7,
-      "evidence": {
-        "name": 0.375,
-        "type": 1.0,
-        "distribution": 0.619,
-        "semantic": 0.772
+        "distribution": 0.926,
+        "semantic": 0.639
       },
       "weights": {
         "name": 0.2,
@@ -541,63 +613,40 @@
       "needs_review": true
     },
     {
+      "source_dataset": "ds_005",
+      "source_column": "amount",
+      "target_dataset": "ds_006",
+      "target_column": "unit_price",
+      "relationship_type": "semantic_match",
+      "confidence": 0.689,
+      "evidence": {
+        "name": 0.375,
+        "type": 1.0,
+        "distribution": 0.621,
+        "semantic": 0.739
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
       "source_dataset": "ds_002",
       "source_column": "created_at",
       "target_dataset": "ds_004",
       "target_column": "order_date",
       "relationship_type": "semantic_match",
-      "confidence": 0.693,
+      "confidence": 0.686,
       "evidence": {
         "name": 0.5,
         "type": 1.0,
-        "distribution": 0.639,
-        "semantic": 0.667
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "total_spent",
-      "target_dataset": "ds_005",
-      "target_column": "amount",
-      "relationship_type": "semantic_match",
-      "confidence": 0.689,
-      "evidence": {
-        "name": 0.235,
-        "type": 1.0,
-        "distribution": 0.694,
-        "semantic": 0.767
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "email",
-      "target_dataset": "ds_003",
-      "target_column": "email_address",
-      "relationship_type": "semantic_match",
-      "confidence": 0.686,
-      "evidence": {
-        "name": 0.556,
-        "type": 1.0,
-        "distribution": 0.5,
-        "semantic": 0.715
+        "distribution": 0.606,
+        "semantic": 0.67
       },
       "weights": {
         "name": 0.2,
@@ -615,12 +664,12 @@
       "target_dataset": "ds_004",
       "target_column": "order_date",
       "relationship_type": "semantic_match",
-      "confidence": 0.685,
+      "confidence": 0.681,
       "evidence": {
         "name": 0.5,
         "type": 1.0,
-        "distribution": 0.631,
-        "semantic": 0.65
+        "distribution": 0.602,
+        "semantic": 0.658
       },
       "weights": {
         "name": 0.2,
@@ -633,17 +682,17 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_004",
-      "source_column": "prod_code",
-      "target_dataset": "ds_006",
-      "target_column": "product_id",
+      "source_dataset": "ds_002",
+      "source_column": "email",
+      "target_dataset": "ds_003",
+      "target_column": "email_address",
       "relationship_type": "semantic_match",
-      "confidence": 0.675,
+      "confidence": 0.68,
       "evidence": {
-        "name": 0.632,
-        "type": 0.8,
-        "distribution": 0.769,
-        "semantic": 0.562
+        "name": 0.556,
+        "type": 1.0,
+        "distribution": 0.489,
+        "semantic": 0.705
       },
       "weights": {
         "name": 0.2,
@@ -668,6 +717,29 @@
         "distribution": 0.5,
         "semantic": 0.687,
         "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "total_spent",
+      "target_dataset": "ds_005",
+      "target_column": "amount",
+      "relationship_type": "semantic_match",
+      "confidence": 0.673,
+      "evidence": {
+        "name": 0.235,
+        "type": 1.0,
+        "distribution": 0.697,
+        "semantic": 0.719
       },
       "weights": {
         "name": 0.2,
@@ -709,12 +781,12 @@
       "target_dataset": "ds_005",
       "target_column": "paid_on",
       "relationship_type": "semantic_match",
-      "confidence": 0.669,
+      "confidence": 0.668,
       "evidence": {
         "name": 0.353,
         "type": 1.0,
-        "distribution": 0.637,
-        "semantic": 0.684
+        "distribution": 0.611,
+        "semantic": 0.698
       },
       "weights": {
         "name": 0.2,
@@ -732,12 +804,36 @@
       "target_dataset": "ds_005",
       "target_column": "paid_on",
       "relationship_type": "semantic_match",
-      "confidence": 0.668,
+      "confidence": 0.664,
       "evidence": {
         "name": 0.353,
         "type": 1.0,
-        "distribution": 0.629,
-        "semantic": 0.685
+        "distribution": 0.603,
+        "semantic": 0.693
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_007",
+      "source_column": "return_id",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.66,
+      "evidence": {
+        "name": 0.533,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.652,
+        "overlap": 0.0
       },
       "weights": {
         "name": 0.2,
@@ -755,35 +851,12 @@
       "target_dataset": "ds_005",
       "target_column": "amount",
       "relationship_type": "semantic_match",
-      "confidence": 0.666,
+      "confidence": 0.656,
       "evidence": {
         "name": 0.235,
         "type": 1.0,
-        "distribution": 0.622,
-        "semantic": 0.752
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_002",
-      "source_column": "email",
-      "target_dataset": "ds_003",
-      "target_column": "email_address",
-      "relationship_type": "semantic_match",
-      "confidence": 0.662,
-      "evidence": {
-        "name": 0.556,
-        "type": 1.0,
-        "distribution": 0.489,
-        "semantic": 0.654
+        "distribution": 0.631,
+        "semantic": 0.719
       },
       "weights": {
         "name": 0.2,
@@ -801,12 +874,12 @@
       "target_dataset": "ds_004",
       "target_column": "order_date",
       "relationship_type": "semantic_match",
-      "confidence": 0.66,
+      "confidence": 0.656,
       "evidence": {
         "name": 0.737,
         "type": 1.0,
         "distribution": 0.378,
-        "semantic": 0.623
+        "semantic": 0.613
       },
       "weights": {
         "name": 0.2,
@@ -867,17 +940,18 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_001",
-      "source_column": "city",
-      "target_dataset": "ds_010",
-      "target_column": "country",
+      "source_dataset": "ds_006",
+      "source_column": "product_id",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.652,
+      "confidence": 0.654,
       "evidence": {
-        "name": 0.545,
+        "name": 0.625,
         "type": 1.0,
-        "distribution": 0.44,
-        "semantic": 0.665
+        "distribution": 0.5,
+        "semantic": 0.584,
+        "overlap": 0.0
       },
       "weights": {
         "name": 0.2,
@@ -902,29 +976,6 @@
         "distribution": 0.5,
         "semantic": 0.654,
         "overlap": 0.0
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_002",
-      "source_column": "city",
-      "target_dataset": "ds_010",
-      "target_column": "country",
-      "relationship_type": "semantic_match",
-      "confidence": 0.647,
-      "evidence": {
-        "name": 0.545,
-        "type": 1.0,
-        "distribution": 0.439,
-        "semantic": 0.651
       },
       "weights": {
         "name": 0.2,
@@ -985,29 +1036,6 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_006",
-      "source_column": "unit_price",
-      "target_dataset": "ds_008",
-      "target_column": "revenue",
-      "relationship_type": "semantic_match",
-      "confidence": 0.642,
-      "evidence": {
-        "name": 0.353,
-        "type": 1.0,
-        "distribution": 0.5,
-        "semantic": 0.705
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
       "source_dataset": "ds_001",
       "source_column": "customer_id",
       "target_dataset": "ds_003",
@@ -1056,17 +1084,63 @@
       "needs_review": true
     },
     {
+      "source_dataset": "ds_002",
+      "source_column": "city",
+      "target_dataset": "ds_010",
+      "target_column": "country",
+      "relationship_type": "semantic_match",
+      "confidence": 0.64,
+      "evidence": {
+        "name": 0.545,
+        "type": 1.0,
+        "distribution": 0.439,
+        "semantic": 0.633
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_006",
+      "source_column": "unit_price",
+      "target_dataset": "ds_008",
+      "target_column": "revenue",
+      "relationship_type": "semantic_match",
+      "confidence": 0.64,
+      "evidence": {
+        "name": 0.353,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.697
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
       "source_dataset": "ds_003",
       "source_column": "email_address",
       "target_dataset": "ds_010",
       "target_column": "contact_mail",
       "relationship_type": "semantic_match",
-      "confidence": 0.639,
+      "confidence": 0.638,
       "evidence": {
         "name": 0.48,
         "type": 1.0,
         "distribution": 0.5,
-        "semantic": 0.622
+        "semantic": 0.621
       },
       "weights": {
         "name": 0.2,
@@ -1127,6 +1201,29 @@
       "needs_review": true
     },
     {
+      "source_dataset": "ds_001",
+      "source_column": "city",
+      "target_dataset": "ds_010",
+      "target_column": "country",
+      "relationship_type": "semantic_match",
+      "confidence": 0.635,
+      "evidence": {
+        "name": 0.545,
+        "type": 1.0,
+        "distribution": 0.44,
+        "semantic": 0.618
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
       "source_dataset": "ds_002",
       "source_column": "created_at",
       "target_dataset": "ds_009",
@@ -1136,8 +1233,31 @@
       "evidence": {
         "name": 0.3,
         "type": 1.0,
-        "distribution": 0.617,
-        "semantic": 0.629
+        "distribution": 0.596,
+        "semantic": 0.646
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "email",
+      "target_dataset": "ds_010",
+      "target_column": "contact_mail",
+      "relationship_type": "semantic_match",
+      "confidence": 0.633,
+      "evidence": {
+        "name": 0.471,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.612
       },
       "weights": {
         "name": 0.2,
@@ -1155,35 +1275,12 @@
       "target_dataset": "ds_009",
       "target_column": "shipped_on",
       "relationship_type": "semantic_match",
-      "confidence": 0.633,
+      "confidence": 0.632,
       "evidence": {
         "name": 0.3,
         "type": 1.0,
-        "distribution": 0.608,
-        "semantic": 0.631
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_005",
-      "source_column": "amount",
-      "target_dataset": "ds_008",
-      "target_column": "revenue",
-      "relationship_type": "semantic_match",
-      "confidence": 0.629,
-      "evidence": {
-        "name": 0.154,
-        "type": 1.0,
-        "distribution": 0.507,
-        "semantic": 0.775
+        "distribution": 0.598,
+        "semantic": 0.635
       },
       "weights": {
         "name": 0.2,
@@ -1205,8 +1302,54 @@
       "evidence": {
         "name": 0.381,
         "type": 1.0,
+        "distribution": 0.545,
+        "semantic": 0.607
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
+      "source_column": "total_spent",
+      "target_dataset": "ds_008",
+      "target_column": "revenue",
+      "relationship_type": "semantic_match",
+      "confidence": 0.625,
+      "evidence": {
+        "name": 0.222,
+        "type": 1.0,
+        "distribution": 0.546,
+        "semantic": 0.698
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_002",
+      "source_column": "total_spent",
+      "target_dataset": "ds_008",
+      "target_column": "revenue",
+      "relationship_type": "semantic_match",
+      "confidence": 0.625,
+      "evidence": {
+        "name": 0.222,
+        "type": 1.0,
         "distribution": 0.544,
-        "semantic": 0.609
+        "semantic": 0.698
       },
       "weights": {
         "name": 0.2,
@@ -1276,8 +1419,8 @@
       "evidence": {
         "name": 0.381,
         "type": 1.0,
-        "distribution": 0.529,
-        "semantic": 0.611
+        "distribution": 0.532,
+        "semantic": 0.607
       },
       "weights": {
         "name": 0.2,
@@ -1291,16 +1434,17 @@
     },
     {
       "source_dataset": "ds_006",
-      "source_column": "product_id",
-      "target_dataset": "ds_008",
-      "target_column": "sku",
+      "source_column": "vendor_id",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
       "relationship_type": "semantic_match",
       "confidence": 0.621,
       "evidence": {
-        "name": 0.154,
-        "type": 0.8,
-        "distribution": 1.0,
-        "semantic": 0.515
+        "name": 0.667,
+        "type": 1.0,
+        "distribution": 0.312,
+        "semantic": 0.6,
+        "overlap": 0.0
       },
       "weights": {
         "name": 0.2,
@@ -1337,109 +1481,17 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_001",
-      "source_column": "total_spent",
-      "target_dataset": "ds_008",
-      "target_column": "revenue",
+      "source_dataset": "ds_005",
+      "source_column": "ref_order",
+      "target_dataset": "ds_007",
+      "target_column": "return_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.619,
+      "confidence": 0.618,
       "evidence": {
-        "name": 0.222,
+        "name": 0.444,
         "type": 1.0,
-        "distribution": 0.537,
-        "semantic": 0.687
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "email",
-      "target_dataset": "ds_010",
-      "target_column": "contact_mail",
-      "relationship_type": "semantic_match",
-      "confidence": 0.619,
-      "evidence": {
-        "name": 0.471,
-        "type": 1.0,
-        "distribution": 0.5,
-        "semantic": 0.572
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_006",
-      "source_column": "unit_price",
-      "target_dataset": "ds_008",
-      "target_column": "units_sold",
-      "relationship_type": "semantic_match",
-      "confidence": 0.619,
-      "evidence": {
-        "name": 0.5,
-        "type": 0.8,
-        "distribution": 0.517,
-        "semantic": 0.656
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_001",
-      "source_column": "created_at",
-      "target_dataset": "ds_003",
-      "target_column": "hire_date",
-      "relationship_type": "semantic_match",
-      "confidence": 0.615,
-      "evidence": {
-        "name": 0.526,
-        "type": 1.0,
-        "distribution": 0.457,
-        "semantic": 0.558
-      },
-      "weights": {
-        "name": 0.2,
-        "semantic": 0.35,
-        "type": 0.2,
-        "distribution": 0.25
-      },
-      "used_embeddings": true,
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_004",
-      "source_column": "client_ref",
-      "target_dataset": "ds_005",
-      "target_column": "order_ref",
-      "relationship_type": "semantic_match",
-      "confidence": 0.615,
-      "evidence": {
-        "name": 0.526,
-        "type": 1.0,
-        "distribution": 0.398,
-        "semantic": 0.602,
+        "distribution": 0.451,
+        "semantic": 0.619,
         "overlap": 0.0
       },
       "weights": {
@@ -1453,17 +1505,88 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_002",
+      "source_dataset": "ds_006",
+      "source_column": "vendor_id",
+      "target_dataset": "ds_007",
+      "target_column": "return_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.617,
+      "evidence": {
+        "name": 0.556,
+        "type": 1.0,
+        "distribution": 0.312,
+        "semantic": 0.652,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_001",
       "source_column": "created_at",
       "target_dataset": "ds_003",
       "target_column": "hire_date",
       "relationship_type": "semantic_match",
-      "confidence": 0.614,
+      "confidence": 0.615,
       "evidence": {
         "name": 0.526,
         "type": 1.0,
-        "distribution": 0.447,
-        "semantic": 0.564
+        "distribution": 0.449,
+        "semantic": 0.565
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_005",
+      "source_column": "amount",
+      "target_dataset": "ds_008",
+      "target_column": "revenue",
+      "relationship_type": "semantic_match",
+      "confidence": 0.615,
+      "evidence": {
+        "name": 0.154,
+        "type": 1.0,
+        "distribution": 0.512,
+        "semantic": 0.731
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_006",
+      "source_column": "vendor_id",
+      "target_dataset": "ds_009",
+      "target_column": "shipment_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.614,
+      "evidence": {
+        "name": 0.5,
+        "type": 1.0,
+        "distribution": 0.312,
+        "semantic": 0.673,
+        "overlap": 0.0
       },
       "weights": {
         "name": 0.2,
@@ -1501,16 +1624,40 @@
     },
     {
       "source_dataset": "ds_005",
-      "source_column": "order_ref",
-      "target_dataset": "ds_007",
-      "target_column": "return_id",
+      "source_column": "payment_id",
+      "target_dataset": "ds_006",
+      "target_column": "vendor_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.613,
+      "confidence": 0.612,
       "evidence": {
-        "name": 0.444,
+        "name": 0.526,
         "type": 1.0,
-        "distribution": 0.451,
-        "semantic": 0.603,
+        "distribution": 0.312,
+        "semantic": 0.652,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_009",
+      "source_column": "ord_id",
+      "target_dataset": "ds_010",
+      "target_column": "supplier_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.612,
+      "evidence": {
+        "name": 0.471,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.552,
         "overlap": 0.0
       },
       "weights": {
@@ -1525,16 +1672,16 @@
     },
     {
       "source_dataset": "ds_002",
-      "source_column": "total_spent",
-      "target_dataset": "ds_008",
-      "target_column": "revenue",
+      "source_column": "created_at",
+      "target_dataset": "ds_003",
+      "target_column": "hire_date",
       "relationship_type": "semantic_match",
-      "confidence": 0.612,
+      "confidence": 0.611,
       "evidence": {
-        "name": 0.222,
+        "name": 0.526,
         "type": 1.0,
-        "distribution": 0.535,
-        "semantic": 0.669
+        "distribution": 0.439,
+        "semantic": 0.559
       },
       "weights": {
         "name": 0.2,
@@ -1547,17 +1694,65 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_002",
-      "source_column": "email",
-      "target_dataset": "ds_010",
-      "target_column": "contact_mail",
+      "source_dataset": "ds_004",
+      "source_column": "order_id",
+      "target_dataset": "ds_006",
+      "target_column": "vendor_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.611,
+      "evidence": {
+        "name": 0.588,
+        "type": 1.0,
+        "distribution": 0.312,
+        "semantic": 0.616,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_004",
+      "source_column": "buyer_id",
+      "target_dataset": "ds_006",
+      "target_column": "vendor_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.611,
+      "evidence": {
+        "name": 0.235,
+        "type": 1.0,
+        "distribution": 0.464,
+        "semantic": 0.708,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_006",
+      "source_column": "unit_price",
+      "target_dataset": "ds_008",
+      "target_column": "units_sold",
       "relationship_type": "semantic_match",
       "confidence": 0.609,
       "evidence": {
-        "name": 0.471,
-        "type": 1.0,
-        "distribution": 0.489,
-        "semantic": 0.55
+        "name": 0.5,
+        "type": 0.8,
+        "distribution": 0.501,
+        "semantic": 0.64
       },
       "weights": {
         "name": 0.2,
@@ -1643,16 +1838,16 @@
     },
     {
       "source_dataset": "ds_005",
-      "source_column": "order_ref",
-      "target_dataset": "ds_006",
-      "target_column": "supplier_ref",
+      "source_column": "ref_order",
+      "target_dataset": "ds_008",
+      "target_column": "item_code",
       "relationship_type": "semantic_match",
-      "confidence": 0.601,
+      "confidence": 0.605,
       "evidence": {
-        "name": 0.381,
+        "name": 0.556,
         "type": 1.0,
-        "distribution": 0.361,
-        "semantic": 0.67,
+        "distribution": 0.451,
+        "semantic": 0.519,
         "overlap": 0.0
       },
       "weights": {
@@ -1666,17 +1861,89 @@
       "needs_review": true
     },
     {
-      "source_dataset": "ds_007",
-      "source_column": "return_id",
+      "source_dataset": "ds_001",
+      "source_column": "customer_id",
       "target_dataset": "ds_009",
-      "target_column": "order_no",
+      "target_column": "ord_id",
       "relationship_type": "semantic_match",
-      "confidence": 0.6,
+      "confidence": 0.603,
       "evidence": {
-        "name": 0.471,
+        "name": 0.353,
         "type": 1.0,
         "distribution": 0.5,
-        "semantic": 0.517,
+        "semantic": 0.592,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_002",
+      "source_column": "customer_id",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.603,
+      "evidence": {
+        "name": 0.353,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.592,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_004",
+      "source_column": "item_no",
+      "target_dataset": "ds_006",
+      "target_column": "vendor_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.603,
+      "evidence": {
+        "name": 0.5,
+        "type": 1.0,
+        "distribution": 0.456,
+        "semantic": 0.539,
+        "overlap": 0.0
+      },
+      "weights": {
+        "name": 0.2,
+        "semantic": 0.35,
+        "type": 0.2,
+        "distribution": 0.25
+      },
+      "used_embeddings": true,
+      "status": "inferred",
+      "needs_review": true
+    },
+    {
+      "source_dataset": "ds_005",
+      "source_column": "payment_id",
+      "target_dataset": "ds_009",
+      "target_column": "ord_id",
+      "relationship_type": "semantic_match",
+      "confidence": 0.602,
+      "evidence": {
+        "name": 0.375,
+        "type": 1.0,
+        "distribution": 0.5,
+        "semantic": 0.577,
         "overlap": 0.0
       },
       "weights": {
@@ -1714,43 +1981,21 @@
       "needs_review": false
     },
     {
-      "source_dataset": "ds_010",
-      "source_column": "supplier_id",
-      "target_dataset": "ds_006",
-      "target_column": "supplier_ref",
-      "relationship_type": "possible_foreign_key",
-      "cardinality": "one_to_many",
-      "confidence": 0.967,
-      "evidence": {
-        "referential_coverage": 1.0,
-        "parent_uniqueness": 1.0,
-        "parent_distinct_values": 15,
-        "child_rows": 60,
-        "orphan_values": 0,
-        "orphan_examples": [],
-        "name_similarity": 0.783,
-        "type_compatible": true,
-        "parent_semantic_type": "identifier"
-      },
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
       "source_dataset": "ds_004",
       "source_column": "order_id",
       "target_dataset": "ds_009",
-      "target_column": "order_no",
+      "target_column": "ord_id",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_one",
-      "confidence": 0.963,
+      "confidence": 0.979,
       "evidence": {
         "referential_coverage": 1.0,
         "parent_uniqueness": 1.0,
         "parent_distinct_values": 800,
-        "child_rows": 674,
+        "child_rows": 667,
         "orphan_values": 0,
         "orphan_examples": [],
-        "name_similarity": 0.75,
+        "name_similarity": 0.857,
         "type_compatible": true,
         "parent_semantic_type": "identifier"
       },
@@ -1758,32 +2003,38 @@
       "needs_review": false
     },
     {
-      "source_dataset": "ds_006",
-      "source_column": "product_id",
+      "source_dataset": "ds_002",
+      "source_column": "customer_id",
       "target_dataset": "ds_004",
-      "target_column": "prod_code",
+      "target_column": "buyer_id",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_many",
-      "confidence": 0.945,
+      "confidence": 0.935,
       "evidence": {
-        "referential_coverage": 1.0,
+        "referential_coverage": 0.985,
         "parent_uniqueness": 1.0,
-        "parent_distinct_values": 60,
+        "parent_distinct_values": 355,
         "child_rows": 800,
-        "orphan_values": 0,
-        "orphan_examples": [],
+        "orphan_values": 12,
+        "orphan_examples": [
+          "9012",
+          "9007",
+          "9006",
+          "9008",
+          "9011"
+        ],
         "name_similarity": 0.632,
         "type_compatible": true,
         "parent_semantic_type": "identifier"
       },
       "status": "inferred",
-      "needs_review": false
+      "needs_review": true
     },
     {
       "source_dataset": "ds_004",
       "source_column": "order_id",
       "target_dataset": "ds_005",
-      "target_column": "order_ref",
+      "target_column": "ref_order",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_many",
       "confidence": 0.934,
@@ -1791,14 +2042,14 @@
         "referential_coverage": 0.993,
         "parent_uniqueness": 1.0,
         "parent_distinct_values": 800,
-        "child_rows": 912,
+        "child_rows": 914,
         "orphan_values": 6,
         "orphan_examples": [
-          "59006",
-          "59003",
-          "59001",
           "59005",
-          "59004"
+          "59002",
+          "59001",
+          "59004",
+          "59003"
         ],
         "name_similarity": 0.588,
         "type_compatible": true,
@@ -1811,10 +2062,10 @@
       "source_dataset": "ds_004",
       "source_column": "order_id",
       "target_dataset": "ds_007",
-      "target_column": "ord_ref",
+      "target_column": "orig_order",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_many",
-      "confidence": 0.93,
+      "confidence": 0.933,
       "evidence": {
         "referential_coverage": 1.0,
         "parent_uniqueness": 1.0,
@@ -1822,7 +2073,7 @@
         "child_rows": 60,
         "orphan_values": 0,
         "orphan_examples": [],
-        "name_similarity": 0.533,
+        "name_similarity": 0.556,
         "type_compatible": true,
         "parent_semantic_type": "identifier"
       },
@@ -1844,11 +2095,11 @@
         "child_rows": 355,
         "orphan_values": 40,
         "orphan_examples": [
-          "aditya.shah1301@mail.com",
-          "harsh.ghosh1302@mail.com",
-          "ekta.roy1303@mail.com",
-          "shreya.khan1304@mail.com",
-          "divya.desai1305@mail.com"
+          "anjali.rana1301@mail.com",
+          "pooja.kapadia1302@mail.com",
+          "nisha.jain1303@mail.com",
+          "riya.gupta1304@mail.com",
+          "tarun.malhotra1305@mail.com"
         ],
         "name_similarity": 1.0,
         "type_compatible": true,
@@ -1872,11 +2123,11 @@
         "child_rows": 355,
         "orphan_values": 40,
         "orphan_examples": [
-          "+91 9495521185",
-          "+91 9430366556",
-          "+91 9344322679",
-          "+91 9931726993",
-          "+91 9714792641"
+          "+91 9489581205",
+          "+91 9147882932",
+          "+91 9945407997",
+          "+91 9401236206",
+          "+91 9729976100"
         ],
         "name_similarity": 1.0,
         "type_compatible": true,
@@ -1884,6 +2135,72 @@
       },
       "status": "inferred",
       "needs_review": true
+    },
+    {
+      "source_dataset": "ds_008",
+      "source_column": "item_code",
+      "target_dataset": "ds_004",
+      "target_column": "item_no",
+      "relationship_type": "possible_foreign_key",
+      "cardinality": "one_to_many",
+      "confidence": 0.925,
+      "evidence": {
+        "referential_coverage": 1.0,
+        "parent_uniqueness": 1.0,
+        "parent_distinct_values": 60,
+        "child_rows": 800,
+        "orphan_values": 0,
+        "orphan_examples": [],
+        "name_similarity": 0.5,
+        "type_compatible": true,
+        "parent_semantic_type": "identifier"
+      },
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_010",
+      "source_column": "supplier_id",
+      "target_dataset": "ds_006",
+      "target_column": "vendor_id",
+      "relationship_type": "possible_foreign_key",
+      "cardinality": "one_to_many",
+      "confidence": 0.925,
+      "evidence": {
+        "referential_coverage": 1.0,
+        "parent_uniqueness": 1.0,
+        "parent_distinct_values": 15,
+        "child_rows": 60,
+        "orphan_values": 0,
+        "orphan_examples": [],
+        "name_similarity": 0.5,
+        "type_compatible": true,
+        "parent_semantic_type": "identifier"
+      },
+      "status": "inferred",
+      "needs_review": false
+    },
+    {
+      "source_dataset": "ds_006",
+      "source_column": "product_id",
+      "target_dataset": "ds_004",
+      "target_column": "item_no",
+      "relationship_type": "possible_foreign_key",
+      "cardinality": "one_to_many",
+      "confidence": 0.903,
+      "evidence": {
+        "referential_coverage": 1.0,
+        "parent_uniqueness": 1.0,
+        "parent_distinct_values": 60,
+        "child_rows": 800,
+        "orphan_values": 0,
+        "orphan_examples": [],
+        "name_similarity": 0.353,
+        "type_compatible": true,
+        "parent_semantic_type": "identifier"
+      },
+      "status": "inferred",
+      "needs_review": false
     },
     {
       "source_dataset": "ds_001",
@@ -1915,41 +2232,13 @@
       "dominated_by": "reverse direction ds_002.customer_id"
     },
     {
-      "source_dataset": "ds_002",
-      "source_column": "customer_id",
-      "target_dataset": "ds_004",
-      "target_column": "client_ref",
-      "relationship_type": "possible_foreign_key",
-      "cardinality": "one_to_many",
-      "confidence": 0.883,
-      "evidence": {
-        "referential_coverage": 0.985,
-        "parent_uniqueness": 1.0,
-        "parent_distinct_values": 355,
-        "child_rows": 800,
-        "orphan_values": 12,
-        "orphan_examples": [
-          "9004",
-          "9005",
-          "9001",
-          "9012",
-          "9008"
-        ],
-        "name_similarity": 0.286,
-        "type_compatible": true,
-        "parent_semantic_type": "identifier"
-      },
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
       "source_dataset": "ds_006",
       "source_column": "product_id",
       "target_dataset": "ds_008",
-      "target_column": "sku",
+      "target_column": "item_code",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_one",
-      "confidence": 0.873,
+      "confidence": 0.897,
       "evidence": {
         "referential_coverage": 1.0,
         "parent_uniqueness": 1.0,
@@ -1957,7 +2246,7 @@
         "child_rows": 60,
         "orphan_values": 0,
         "orphan_examples": [],
-        "name_similarity": 0.154,
+        "name_similarity": 0.316,
         "type_compatible": true,
         "parent_semantic_type": "identifier"
       },
@@ -1966,12 +2255,12 @@
     },
     {
       "source_dataset": "ds_008",
-      "source_column": "sku",
+      "source_column": "item_code",
       "target_dataset": "ds_006",
       "target_column": "product_id",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_one",
-      "confidence": 0.873,
+      "confidence": 0.897,
       "evidence": {
         "referential_coverage": 1.0,
         "parent_uniqueness": 1.0,
@@ -1979,35 +2268,35 @@
         "child_rows": 60,
         "orphan_values": 0,
         "orphan_examples": [],
-        "name_similarity": 0.154,
+        "name_similarity": 0.316,
         "type_compatible": true,
-        "parent_semantic_type": "text"
+        "parent_semantic_type": "identifier"
       },
       "status": "inferred",
       "needs_review": false
     },
     {
       "source_dataset": "ds_009",
-      "source_column": "order_no",
+      "source_column": "ord_id",
       "target_dataset": "ds_004",
       "target_column": "order_id",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_one",
-      "confidence": 0.86,
+      "confidence": 0.871,
       "evidence": {
-        "referential_coverage": 0.843,
+        "referential_coverage": 0.834,
         "parent_uniqueness": 1.0,
-        "parent_distinct_values": 674,
+        "parent_distinct_values": 667,
         "child_rows": 800,
-        "orphan_values": 126,
+        "orphan_values": 133,
         "orphan_examples": [
           "50005",
-          "50015",
-          "50031",
-          "50035",
-          "50045"
+          "50007",
+          "50014",
+          "50016",
+          "50021"
         ],
-        "name_similarity": 0.75,
+        "name_similarity": 0.857,
         "type_compatible": true,
         "parent_semantic_type": "identifier"
       },
@@ -2016,110 +2305,90 @@
       "dominated_by": "reverse direction ds_004.order_id"
     },
     {
-      "source_dataset": "ds_009",
-      "source_column": "order_no",
-      "target_dataset": "ds_007",
-      "target_column": "ord_ref",
-      "relationship_type": "possible_foreign_key",
-      "cardinality": "one_to_many",
-      "confidence": 0.854,
-      "evidence": {
-        "referential_coverage": 0.883,
-        "parent_uniqueness": 1.0,
-        "parent_distinct_values": 674,
-        "child_rows": 60,
-        "orphan_values": 7,
-        "orphan_examples": [
-          "50480",
-          "50526",
-          "50031",
-          "50453",
-          "50111"
-        ],
-        "name_similarity": 0.533,
-        "type_compatible": true,
-        "parent_semantic_type": "identifier"
-      },
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
-      "source_dataset": "ds_008",
-      "source_column": "sku",
-      "target_dataset": "ds_004",
-      "target_column": "prod_code",
-      "relationship_type": "possible_foreign_key",
-      "cardinality": "one_to_many",
-      "confidence": 0.85,
-      "evidence": {
-        "referential_coverage": 1.0,
-        "parent_uniqueness": 1.0,
-        "parent_distinct_values": 60,
-        "child_rows": 800,
-        "orphan_values": 0,
-        "orphan_examples": [],
-        "name_similarity": 0.0,
-        "type_compatible": true,
-        "parent_semantic_type": "text"
-      },
-      "status": "inferred",
-      "needs_review": false
-    },
-    {
-      "source_dataset": "ds_009",
-      "source_column": "order_no",
-      "target_dataset": "ds_005",
-      "target_column": "order_ref",
-      "relationship_type": "possible_foreign_key",
-      "cardinality": "one_to_many",
-      "confidence": 0.83,
-      "evidence": {
-        "referential_coverage": 0.833,
-        "parent_uniqueness": 1.0,
-        "parent_distinct_values": 674,
-        "child_rows": 912,
-        "orphan_values": 126,
-        "orphan_examples": [
-          "50005",
-          "50015",
-          "50035",
-          "50045",
-          "50059"
-        ],
-        "name_similarity": 0.588,
-        "type_compatible": true,
-        "parent_semantic_type": "identifier"
-      },
-      "status": "inferred",
-      "needs_review": true
-    },
-    {
       "source_dataset": "ds_001",
       "source_column": "customer_id",
       "target_dataset": "ds_004",
-      "target_column": "client_ref",
+      "target_column": "buyer_id",
       "relationship_type": "possible_foreign_key",
       "cardinality": "one_to_many",
-      "confidence": 0.804,
+      "confidence": 0.858,
       "evidence": {
-        "referential_coverage": 0.864,
+        "referential_coverage": 0.866,
         "parent_uniqueness": 1.0,
         "parent_distinct_values": 300,
         "child_rows": 800,
-        "orphan_values": 48,
+        "orphan_values": 49,
         "orphan_examples": [
-          "1305",
-          "1334",
-          "9004",
-          "1325",
-          "1338"
+          "1301",
+          "1322",
+          "1340",
+          "1316",
+          "1323"
         ],
-        "name_similarity": 0.286,
+        "name_similarity": 0.632,
         "type_compatible": true,
         "parent_semantic_type": "identifier"
       },
       "status": "inferred",
       "needs_review": true
+    },
+    {
+      "source_dataset": "ds_009",
+      "source_column": "ord_id",
+      "target_dataset": "ds_007",
+      "target_column": "orig_order",
+      "relationship_type": "possible_foreign_key",
+      "cardinality": "one_to_many",
+      "confidence": 0.827,
+      "evidence": {
+        "referential_coverage": 0.85,
+        "parent_uniqueness": 1.0,
+        "parent_distinct_values": 667,
+        "child_rows": 60,
+        "orphan_values": 9,
+        "orphan_examples": [
+          "50218",
+          "50553",
+          "50770",
+          "50662",
+          "50535"
+        ],
+        "name_similarity": 0.5,
+        "type_compatible": true,
+        "parent_semantic_type": "identifier"
+      },
+      "status": "inferred",
+      "needs_review": true,
+      "dominated_by": "ds_004.order_id"
+    },
+    {
+      "source_dataset": "ds_009",
+      "source_column": "ord_id",
+      "target_dataset": "ds_005",
+      "target_column": "ref_order",
+      "relationship_type": "possible_foreign_key",
+      "cardinality": "one_to_many",
+      "confidence": 0.8,
+      "evidence": {
+        "referential_coverage": 0.83,
+        "parent_uniqueness": 1.0,
+        "parent_distinct_values": 667,
+        "child_rows": 914,
+        "orphan_values": 129,
+        "orphan_examples": [
+          "50005",
+          "50007",
+          "50014",
+          "50016",
+          "50021"
+        ],
+        "name_similarity": 0.4,
+        "type_compatible": true,
+        "parent_semantic_type": "identifier"
+      },
+      "status": "inferred",
+      "needs_review": true,
+      "dominated_by": "ds_004.order_id"
     }
   ]
 }

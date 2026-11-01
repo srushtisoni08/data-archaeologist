@@ -11,7 +11,7 @@ PATTERNS = {
     "boolean": re.compile(r"^(true|false|yes|no|y|n|0|1)$", re.I),
 }
 NAME_HINTS = {
-    "identifier": ("id", "ref", "no", "num", "code", "key", "uuid"),
+    "identifier": ("id", "ref", "no", "num", "code", "key", "uuid", "sku"),
     "person_name": ("name", "fullname"),
     "geo_location": ("city", "state", "country", "address", "zip", "pincode", "location", "region"),
     "date": ("date", "created", "joined", "updated", "_at", "dob"),
@@ -53,7 +53,7 @@ def detect_semantic_type(col: str, s: pd.Series) -> tuple[str, float]:
                 return "date", round(float(ratio), 3)
 
     unique_ratio = s.nunique() / len(s)
-    if hint == "identifier" and (unique_ratio > 0.5 or pd.api.types.is_integer_dtype(s)):
+    if hint == "identifier" and (unique_ratio > 0.5 or pd.api.types.is_integer_dtype(s) or s.nunique() > 20):
         return "identifier", 0.8
     if hint in ("person_name", "geo_location") and not pd.api.types.is_numeric_dtype(s):
         return hint, 0.7

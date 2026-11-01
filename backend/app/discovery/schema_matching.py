@@ -8,6 +8,7 @@ WEIGHTS_FULL = {"name": 0.20, "semantic": 0.35, "type": 0.20, "distribution": 0.
 WEIGHTS_NO_EMB = {"name": 0.30, "type": 0.30, "distribution": 0.40}
 MIN_SCORE = 0.60
 REVIEW_BELOW = 0.80
+OVERLAP_MIN, OVERLAP_MIN_SIZE = 0.8, 5
 
 _model = None
 
@@ -91,13 +92,14 @@ def match_columns(profiles: list[dict]) -> list[dict]:
                     comp["semantic"] = float(np.dot(emb[(pa["dataset_id"], ca["name"])],
                                                     emb[(pb["dataset_id"], cb["name"])]))
                 score = sum(W[k] * max(0.0, comp[k]) for k in W)
+                # value containment between identifier columns: strong evidence for renamed keys
                 if ca["semantic_type"] == "identifier" and cb["semantic_type"] == "identifier":
                     va = set(norm_values(pa["dataset_id"], ca["name"]))
                     vb = set(norm_values(pb["dataset_id"], cb["name"]))
                     ov = len(va & vb) / max(min(len(va), len(vb)), 1)
                     comp["overlap"] = ov
-                    if ov >= 0.8:
-                        score = max(score, 0.5 * score + 0.5 * ov)
+                    if ov >= OVERLAP_MIN and min(len(va), len(vb)) >= OVERLAP_MIN_SIZE:
+                        score = max(score, 0.4 + 0.5 * ov)
                 if score >= MIN_SCORE:
                     out.append({
                         "source_dataset": pa["dataset_id"], "source_column": ca["name"],

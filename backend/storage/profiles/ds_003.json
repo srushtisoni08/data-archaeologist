@@ -2,8 +2,8 @@
   "dataset_id": "ds_003",
   "filename": "employees.csv",
   "stored_path": "D:\\automation\\backend\\storage\\originals\\ds_003_employees.csv",
-  "size_bytes": 2600,
-  "sha256": "3156aadc08f36846981876b89b9d89f58fc6d745d5e8f95876bc414f096ebf48",
+  "size_bytes": 2526,
+  "sha256": "34ee94aea8242201576dc0abed103e96be7bc262a7e4333f93b1859bce341e63",
   "format": "csv",
   "encoding": "ascii",
   "delimiter": ",",
@@ -53,11 +53,11 @@
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "Shreya Parekh": 1,
-        "Hetal Bose": 1,
-        "Isha Reddy": 1,
-        "Swati Jain": 1,
-        "Arjun Solanki": 1
+        "Komal Nair": 1,
+        "Neha Singh": 1,
+        "Asha Joshi": 1,
+        "Rahul Rao": 1,
+        "Swati Das": 1
       },
       "top_patterns": {
         "Aa Aa": 40
@@ -78,11 +78,11 @@
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "shreya.parekh@corp.example.com": 1,
-        "hetal.bose@corp.example.com": 1,
-        "isha.reddy@corp.example.com": 1,
-        "swati.jain@corp.example.com": 1,
-        "arjun.solanki@corp.example.com": 1
+        "komal.nair@corp.example.com": 1,
+        "neha.singh@corp.example.com": 1,
+        "asha.joshi@corp.example.com": 1,
+        "rahul.rao@corp.example.com": 1,
+        "swati.das@corp.example.com": 1
       },
       "top_patterns": {
         "a.a@a.a.a": 40
@@ -103,15 +103,15 @@
       "unique_ratio": 0.125,
       "cardinality": "low",
       "top_values": {
-        "Sales": 12,
+        "IT": 10,
         "HR": 9,
-        "Finance": 8,
-        "IT": 8,
-        "Ops": 3
+        "Sales": 9,
+        "Finance": 6,
+        "Ops": 6
       },
       "top_patterns": {
-        "Aa": 23,
-        "A": 17
+        "Aa": 21,
+        "A": 19
       },
       "min_length": 2,
       "max_length": 7
@@ -129,55 +129,55 @@
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "2017-02-25": 1,
-        "2018-12-22": 1,
-        "2019-03-09": 1,
-        "2017-09-23": 1,
-        "2015-05-10": 1
+        "2019-01-05": 1,
+        "2020-01-30": 1,
+        "2017-07-28": 1,
+        "2020-08-13": 1,
+        "2016-09-23": 1
       },
       "top_patterns": {
         "9-9-9": 40
       },
       "invalid_dates": 0,
-      "min": "2015-01-22 00:00:00",
-      "max": "2021-10-14 00:00:00"
+      "min": "2015-01-26 00:00:00",
+      "max": "2021-10-04 00:00:00"
     }
   ],
   "sample": [
     {
       "employee_id": "2001",
-      "name": "Shreya Parekh",
-      "email_address": "shreya.parekh@corp.example.com",
-      "department": "Ops",
-      "hire_date": "2017-02-25"
+      "name": "Komal Nair",
+      "email_address": "komal.nair@corp.example.com",
+      "department": "HR",
+      "hire_date": "2019-01-05"
     },
     {
       "employee_id": "2002",
-      "name": "Hetal Bose",
-      "email_address": "hetal.bose@corp.example.com",
+      "name": "Neha Singh",
+      "email_address": "neha.singh@corp.example.com",
       "department": "Finance",
-      "hire_date": "2018-12-22"
+      "hire_date": "2020-01-30"
     },
     {
       "employee_id": "2003",
-      "name": "Isha Reddy",
-      "email_address": "isha.reddy@corp.example.com",
-      "department": "Sales",
-      "hire_date": "2019-03-09"
+      "name": "Asha Joshi",
+      "email_address": "asha.joshi@corp.example.com",
+      "department": "IT",
+      "hire_date": "2017-07-28"
     },
     {
       "employee_id": "2004",
-      "name": "Swati Jain",
-      "email_address": "swati.jain@corp.example.com",
-      "department": "IT",
-      "hire_date": "2017-09-23"
+      "name": "Rahul Rao",
+      "email_address": "rahul.rao@corp.example.com",
+      "department": "Finance",
+      "hire_date": "2020-08-13"
     },
     {
       "employee_id": "2005",
-      "name": "Arjun Solanki",
-      "email_address": "arjun.solanki@corp.example.com",
-      "department": "Sales",
-      "hire_date": "2015-05-10"
+      "name": "Swati Das",
+      "email_address": "swati.das@corp.example.com",
+      "department": "IT",
+      "hire_date": "2016-09-23"
     }
   ],
   "fingerprint": {
@@ -191,9 +191,9 @@
     ],
     "semantic_summary": {
       "identifier": 1,
-      "date": 1,
-      "text": 1,
       "email": 1,
+      "text": 1,
+      "date": 1,
       "person_name": 1
     },
     "quality_score": 100.0,

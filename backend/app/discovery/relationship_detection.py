@@ -15,7 +15,9 @@ def _group(dtype: str) -> str:
 def _mark_dominated(out: list[dict], pv: dict) -> None:
     key = lambda r: (r["source_dataset"], r["source_column"], r["target_dataset"], r["target_column"])
     by_key = {key(r): r for r in out}
-    versions = {frozenset((r["source_dataset"], r["target_dataset"])) for r in out if r["cardinality"] == "one_to_one"}
+    # version pairs: 1:1 key link AND the key columns share (nearly) the same name
+    versions = {frozenset((r["source_dataset"], r["target_dataset"])) for r in out
+                if r["cardinality"] == "one_to_one" and r["evidence"]["name_similarity"] >= 0.9}
     by_child = defaultdict(list)
     for r in out:
         by_child[(r["target_dataset"], r["target_column"])].append(r)
