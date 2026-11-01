@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import uploads, relationships, investigations, agent, reports
+from app.api import uploads, relationships, investigations, agent, reports, graph
 
 app = FastAPI(title="Data Archaeologist")
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173"],
@@ -10,6 +10,7 @@ app.include_router(relationships.router, prefix="/api")
 app.include_router(investigations.router, prefix="/api")
 app.include_router(agent.router, prefix="/api")
 app.include_router(reports.router, prefix="/api")
+app.include_router(graph.router, prefix="/api")
 
 @app.get("/health")
 def health():
