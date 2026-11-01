@@ -7,3 +7,5 @@ pyarrow
 charset-normalizer
 rapidfuzz
 sentence-transformers
+httpx
+python-dotenv

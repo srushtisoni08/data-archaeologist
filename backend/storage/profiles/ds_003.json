@@ -1,0 +1,239 @@
+{
+  "dataset_id": "ds_003",
+  "filename": "customers_v2.csv",
+  "stored_path": "D:\\automation\\backend\\storage\\originals\\ds_003_customers_v2.csv",
+  "size_bytes": 332,
+  "sha256": "69c287b617f09593cbb08fd19a15414c29fe550e3cf0dad00b50847b0d06fd68",
+  "format": "csv",
+  "encoding": "ascii",
+  "delimiter": ",",
+  "row_count": 5,
+  "column_count": 6,
+  "columns": [
+    {
+      "name": "customer_id",
+      "semantic_type": "identifier",
+      "semantic_confidence": 0.8,
+      "dtype": "integer",
+      "row_count": 5,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 5,
+      "duplicate_count": 0,
+      "unique_ratio": 1.0,
+      "cardinality": "unique",
+      "top_values": {
+        "101": 1,
+        "102": 1,
+        "103": 1,
+        "104": 1,
+        "105": 1
+      },
+      "top_patterns": {
+        "9": 5
+      },
+      "min": 101,
+      "max": 105,
+      "mean": 103.0,
+      "std": 1.5811,
+      "skew": 0.0,
+      "extreme_outliers": 0,
+      "distribution": "roughly_symmetric"
+    },
+    {
+      "name": "full_name",
+      "semantic_type": "person_name",
+      "semantic_confidence": 0.7,
+      "dtype": "string",
+      "row_count": 5,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 5,
+      "duplicate_count": 0,
+      "unique_ratio": 1.0,
+      "cardinality": "unique",
+      "top_values": {
+        "Asha Patel": 1,
+        "Riya Shah": 1,
+        "Neha Desai": 1,
+        "Kiran Mehta": 1,
+        "A. Patel": 1
+      },
+      "top_patterns": {
+        "Aa Aa": 4,
+        "A. Aa": 1
+      },
+      "min_length": 8,
+      "max_length": 11
+    },
+    {
+      "name": "email",
+      "semantic_type": "email",
+      "semantic_confidence": 1.0,
+      "dtype": "string",
+      "row_count": 5,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 4,
+      "duplicate_count": 1,
+      "unique_ratio": 0.8,
+      "cardinality": "high",
+      "top_values": {
+        "asha@mail.com": 2,
+        "riya@mail.com": 1,
+        "neha@mail.com": 1,
+        "kiran@mail.com": 1
+      },
+      "top_patterns": {
+        "a@a.a": 5
+      },
+      "min_length": 13,
+      "max_length": 14
+    },
+    {
+      "name": "city",
+      "semantic_type": "geo_location",
+      "semantic_confidence": 0.7,
+      "dtype": "string",
+      "row_count": 5,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 3,
+      "duplicate_count": 2,
+      "unique_ratio": 0.6,
+      "cardinality": "high",
+      "top_values": {
+        "Ahmedabad": 2,
+        "Vadodara": 2,
+        "Rajkot": 1
+      },
+      "top_patterns": {
+        "Aa": 5
+      },
+      "min_length": 6,
+      "max_length": 9
+    },
+    {
+      "name": "created_at",
+      "semantic_type": "date",
+      "semantic_confidence": 0.8,
+      "dtype": "string",
+      "row_count": 5,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 5,
+      "duplicate_count": 0,
+      "unique_ratio": 1.0,
+      "cardinality": "unique",
+      "top_values": {
+        "2023-01-02": 1,
+        "2023-02-11": 1,
+        "2023-03-05": 1,
+        "2023-04-09": 1,
+        "2023-13-45": 1
+      },
+      "top_patterns": {
+        "9-9-9": 5
+      },
+      "invalid_dates": 1,
+      "min": "2023-01-02 00:00:00",
+      "max": "2023-04-09 00:00:00"
+    },
+    {
+      "name": "total_spent",
+      "semantic_type": "currency",
+      "semantic_confidence": 0.7,
+      "dtype": "float",
+      "row_count": 5,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 5,
+      "duplicate_count": 0,
+      "unique_ratio": 1.0,
+      "cardinality": "unique",
+      "top_values": {
+        "1500.5": 1,
+        "900.0": 1,
+        "2200.75": 1,
+        "300.0": 1,
+        "-50.0": 1
+      },
+      "top_patterns": {
+        "9.9": 4,
+        "-9.9": 1
+      },
+      "min": -50.0,
+      "max": 2200.75,
+      "mean": 970.25,
+      "std": 906.9696,
+      "skew": 0.362,
+      "extreme_outliers": 0,
+      "distribution": "roughly_symmetric"
+    }
+  ],
+  "sample": [
+    {
+      "customer_id": "101",
+      "full_name": "Asha Patel",
+      "email": "asha@mail.com",
+      "city": "Ahmedabad",
+      "created_at": "2023-01-02",
+      "total_spent": "1500.5"
+    },
+    {
+      "customer_id": "102",
+      "full_name": "Riya Shah",
+      "email": "riya@mail.com",
+      "city": "Vadodara",
+      "created_at": "2023-02-11",
+      "total_spent": "900.0"
+    },
+    {
+      "customer_id": "103",
+      "full_name": "Neha Desai",
+      "email": "neha@mail.com",
+      "city": "Vadodara",
+      "created_at": "2023-03-05",
+      "total_spent": "2200.75"
+    },
+    {
+      "customer_id": "104",
+      "full_name": "Kiran Mehta",
+      "email": "kiran@mail.com",
+      "city": "Rajkot",
+      "created_at": "2023-04-09",
+      "total_spent": "300.0"
+    },
+    {
+      "customer_id": "105",
+      "full_name": "A. Patel",
+      "email": "asha@mail.com",
+      "city": "Ahmedabad",
+      "created_at": "2023-13-45",
+      "total_spent": "-50.0"
+    }
+  ],
+  "fingerprint": {
+    "schema_hash": "604aba871da96247",
+    "duplicate_rows": 0,
+    "candidate_keys": [
+      "customer_id",
+      "full_name",
+      "created_at",
+      "total_spent"
+    ],
+    "semantic_summary": {
+      "email": 1,
+      "identifier": 1,
+      "geo_location": 1,
+      "currency": 1,
+      "date": 1,
+      "person_name": 1
+    },
+    "quality_score": 98.0,
+    "quality_issues": [
+      "created_at: 1 invalid dates"
+    ]
+  },
+  "ingestion_status": "completed"
+}

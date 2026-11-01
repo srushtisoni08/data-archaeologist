@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "datasets": 3,
+    "column_matches": 12,
+    "relationships": 5,
+    "entity_clusters": 3,
+    "entities_needing_review": 0,
+    "anomalies": 3,
+    "contradictions": 1
+  },
+  "entities": {
+    "entities": [
+      {
+        "records": [
+          {
+            "dataset_id": "ds_001",
+            "key": "101",
+            "name": "Asha Patel",
+            "email": "asha@mail.com"
+          },
+          {
+            "dataset_id": "ds_003",
+            "key": "101",
+            "name": "Asha Patel",
+            "email": "asha@mail.com"
+          },
+          {
+            "dataset_id": "ds_003",
+            "key": "105",
+            "name": "A. Patel",
+            "email": "asha@mail.com"
+          }
+        ],
+        "datasets": [
+          "ds_001",
+          "ds_003"
+        ],
+        "status": "same_entity",
+        "links": [
+          {
+            "a": "ds_001:101",
+            "b": "ds_003:105",
+            "score": 0.941,
+            "signals": {
+              "name": 0.9,
+              "email": 1.0
+            },
+            "decision": "same_entity",
+            "reason": "strong agreement across multiple signals"
+          },
+          {
+            "a": "ds_003:101",
+            "b": "ds_003:105",
+            "score": 0.941,
+            "signals": {
+              "name": 0.9,
+              "email": 1.0
+            },
+            "decision": "same_entity",
+            "reason": "strong agreement across multiple signals"
+          },
+          {
+            "a": "ds_001:101",
+            "b": "ds_003:101",
+            "score": 1.0,
+            "signals": {
+              "name": 1.0,
+              "email": 1.0
+            },
+            "decision": "same_entity",
+            "reason": "strong agreement across multiple signals"
+          }
+        ],
+        "entity_id": "E-001"
+      },
+      {
+        "records": [
+          {
+            "dataset_id": "ds_001",
+            "key": "102",
+            "name": "Riya Shah",
+            "email": "riya@mail.com"
+          },
+          {
+            "dataset_id": "ds_003",
+            "key": "102",
+            "name": "Riya Shah",
+            "email": "riya@mail.com"
+          }
+        ],
+        "datasets": [
+          "ds_001",
+          "ds_003"
+        ],
+        "status": "same_entity",
+        "links": [
+          {
+            "a": "ds_001:102",
+            "b": "ds_003:102",
+            "score": 1.0,
+            "signals": {
+              "name": 1.0,
+              "email": 1.0
+            },
+            "decision": "same_entity",
+            "reason": "strong agreement across multiple signals"
+          }
+        ],
+        "entity_id": "E-002"
+      },
+      {
+        "records": [
+          {
+            "dataset_id": "ds_001",
+            "key": "103",
+            "name": "Neha Desai",
+            "email": "neha@mail.com"
+          },
+          {
+            "dataset_id": "ds_003",
+            "key": "103",
+            "name": "Neha Desai",
+            "email": "neha@mail.com"
+          }
+        ],
+        "datasets": [
+          "ds_001",
+          "ds_003"
+        ],
+        "status": "same_entity",
+        "links": [
+          {
+            "a": "ds_001:103",
+            "b": "ds_003:103",
+            "score": 1.0,
+            "signals": {
+              "name": 1.0,
+              "email": 1.0
+            },
+            "decision": "same_entity",
+            "reason": "strong agreement across multiple signals"
+          }
+        ],
+        "entity_id": "E-003"
+      }
+    ],
+    "records_compared": 8,
+    "candidate_pairs": 5,
+    "skipped_oversized_blocks": 0
+  },
+  "anomalies": [
+    {
+      "dataset_id": "ds_003",
+      "column": "created_at",
+      "type": "invalid_date",
+      "severity": "high",
+      "count": 1,
+      "examples": [
+        "2023-13-45"
+      ],
+      "detail": "Values that cannot be parsed as dates",
+      "status": "inferred"
+    },
+    {
+      "dataset_id": "ds_003",
+      "column": "total_spent",
+      "type": "negative_amount",
+      "severity": "high",
+      "count": 1,
+      "examples": [
+        "-50.0"
+      ],
+      "detail": "Negative monetary values",
+      "status": "inferred"
+    },
+    {
+      "dataset_id": "ds_002",
+      "column": "client_ref",
+      "type": "broken_reference",
+      "severity": "medium",
+      "count": 1,
+      "examples": [
+        "104"
+      ],
+      "detail": "Values not found in ds_001.customer_id (coverage 0.75)",
+      "status": "inferred"
+    }
+  ],
+  "contradictions": [
+    {
+      "dataset_a": "ds_001",
+      "file_a": "customers.csv",
+      "column_a": "city",
+      "dataset_b": "ds_003",
+      "file_b": "customers_v2.csv",
+      "column_b": "city",
+      "key_columns": {
+        "ds_001": "customer_id",
+        "ds_003": "customer_id"
+      },
+      "compared": 3,
+      "conflict_count": 1,
+      "conflict_rate": 0.333,
+      "conflicts": [
+        {
+          "key": "102",
+          "value_a": "Surat",
+          "value_b": "Vadodara",
+          "other_fields_agreeing": "4/4"
+        }
+      ],
+      "likely_newer_dataset": "ds_003",
+      "assessment": "Differences may be updates: customers_v2.csv looks newer by filename (inferred, low confidence; file timestamps are not preserved on upload).",
+      "requires_human": true,
+      "status": "inferred"
+    }
+  ]
+}

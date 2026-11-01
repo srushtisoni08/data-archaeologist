@@ -6,7 +6,7 @@ PATTERNS = {
     "url": re.compile(r"^https?://", re.I),
     "uuid": re.compile(r"^[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$", re.I),
     "ip_address": re.compile(r"^(\d{1,3}\.){3}\d{1,3}$"),
-    "phone": re.compile(r"^\+?[\d\s().-]{8,16}$"),
+    "phone": re.compile(r"^(?!\d{1,4}[-/.]\d{1,2}[-/.]\d{1,4}$)\+?[\d\s().-]{8,16}$"),
     "currency": re.compile(r"^[$₹€£]\s?-?[\d,]+(\.\d+)?$"),
     "boolean": re.compile(r"^(true|false|yes|no|y|n|0|1)$", re.I),
 }

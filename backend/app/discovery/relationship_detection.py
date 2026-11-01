@@ -4,6 +4,7 @@ from app.discovery.schema_matching import name_sim
 
 MIN_COVERAGE = 0.5
 SKIP_SEMANTIC = {"boolean", "category", "status"}
+SKIP_PARENT = SKIP_SEMANTIC | {"geo_location", "person_name", "date", "currency"}
 
 
 def _group(dtype: str) -> str:
@@ -17,7 +18,7 @@ def detect_relationships(profiles: list[dict]) -> list[dict]:
         for pc in parent["columns"]:
             # parent candidate: unique, no nulls, not a flag/category
             if pc["unique_ratio"] < 0.98 or pc["null_count"] > 0 or pc["unique_count"] < 2 \
-               or pc["semantic_type"] in SKIP_SEMANTIC:
+            or pc["semantic_type"] in SKIP_PARENT:
                 continue
             pvals = set(norm_values(parent["dataset_id"], pc["name"]))
             for cc in child["columns"]:
@@ -48,6 +49,7 @@ def detect_relationships(profiles: list[dict]) -> list[dict]:
                         "orphan_examples": [str(v) for v in orphans[:5]],
                         "name_similarity": round(nsim, 3),
                         "type_compatible": True,
+                        "parent_semantic_type": pc["semantic_type"],
                     },
                     "status": "inferred",
                     "needs_review": coverage < 1.0 or conf < 0.8,
