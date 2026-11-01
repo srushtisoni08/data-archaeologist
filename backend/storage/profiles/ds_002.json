@@ -1,134 +1,272 @@
 {
   "dataset_id": "ds_002",
-  "filename": "transactions.csv",
-  "stored_path": "D:\\automation\\backend\\storage\\originals\\ds_002_transactions.csv",
-  "size_bytes": 102,
-  "sha256": "c9bcaf1bc0714bb18e34f6144f617756b4984b6be8b389ea834c9d8dc1d9d8ca",
+  "filename": "customers_v2.csv",
+  "stored_path": "D:\\automation\\backend\\storage\\originals\\ds_002_customers_v2.csv",
+  "size_bytes": 30089,
+  "sha256": "31fa23bbcec932bcc7769492696ac83fcf67ce60021495b0a72752f46dba72a3",
   "format": "csv",
   "encoding": "ascii",
   "delimiter": ",",
-  "row_count": 4,
-  "column_count": 3,
+  "row_count": 355,
+  "column_count": 7,
   "columns": [
     {
-      "name": "client_ref",
+      "name": "customer_id",
       "semantic_type": "identifier",
       "semantic_confidence": 0.8,
       "dtype": "integer",
-      "row_count": 4,
+      "row_count": 355,
       "null_count": 0,
       "null_pct": 0.0,
-      "unique_count": 3,
-      "duplicate_count": 1,
-      "unique_ratio": 0.75,
-      "cardinality": "high",
-      "top_values": {
-        "101": 2,
-        "102": 1,
-        "104": 1
-      },
-      "top_patterns": {
-        "9": 4
-      },
-      "min": 101,
-      "max": 104,
-      "mean": 102.0,
-      "std": 1.4142,
-      "skew": 1.414,
-      "extreme_outliers": 0,
-      "distribution": "skewed"
-    },
-    {
-      "name": "amount",
-      "semantic_type": "currency",
-      "semantic_confidence": 0.7,
-      "dtype": "integer",
-      "row_count": 4,
-      "null_count": 0,
-      "null_pct": 0.0,
-      "unique_count": 4,
+      "unique_count": 355,
       "duplicate_count": 0,
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "500": 1,
-        "900": 1,
-        "300": 1,
-        "150": 1
+        "1001": 1,
+        "1002": 1,
+        "1003": 1,
+        "1004": 1,
+        "1005": 1
       },
       "top_patterns": {
-        "9": 4
+        "9": 355
       },
-      "min": 150,
-      "max": 900,
-      "mean": 462.5,
-      "std": 325.0,
-      "skew": 0.951,
+      "min": 1001,
+      "max": 1355,
+      "mean": 1178.0,
+      "std": 102.6239,
+      "skew": 0.0,
       "extreme_outliers": 0,
       "distribution": "roughly_symmetric"
     },
     {
-      "name": "date",
-      "semantic_type": "date",
-      "semantic_confidence": 1.0,
+      "name": "full_name",
+      "semantic_type": "person_name",
+      "semantic_confidence": 0.7,
       "dtype": "string",
-      "row_count": 4,
+      "row_count": 355,
       "null_count": 0,
       "null_pct": 0.0,
-      "unique_count": 4,
+      "unique_count": 330,
+      "duplicate_count": 25,
+      "unique_ratio": 0.9296,
+      "cardinality": "high",
+      "top_values": {
+        "Swati Das": 3,
+        "Aditya Deshmukh": 3,
+        "Varun Gandhi": 3,
+        "Gaurav Rao": 2,
+        "Asha Amin": 2
+      },
+      "top_patterns": {
+        "Aa Aa": 340,
+        "A. Aa": 8,
+        "A A": 7
+      },
+      "min_length": 7,
+      "max_length": 16
+    },
+    {
+      "name": "email",
+      "semantic_type": "email",
+      "semantic_confidence": 1.0,
+      "dtype": "string",
+      "row_count": 355,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 340,
+      "duplicate_count": 15,
+      "unique_ratio": 0.9577,
+      "cardinality": "high",
+      "top_values": {
+        "gaurav.modi1029@mail.com": 2,
+        "ekta.agarwal1047@mail.com": 2,
+        "kavya.modi1060@mail.com": 2,
+        "neha.agarwal1068@mail.com": 2,
+        "neha.shah1106@mail.com": 2
+      },
+      "top_patterns": {
+        "a.a9@a.a": 355
+      },
+      "min_length": 21,
+      "max_length": 29
+    },
+    {
+      "name": "phone",
+      "semantic_type": "phone",
+      "semantic_confidence": 1.0,
+      "dtype": "string",
+      "row_count": 355,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 340,
+      "duplicate_count": 15,
+      "unique_ratio": 0.9577,
+      "cardinality": "high",
+      "top_values": {
+        "+91 9237859287": 2,
+        "+91 9639931481": 2,
+        "+91 9784095277": 2,
+        "+91 9338836384": 2,
+        "+91 9365518424": 2
+      },
+      "top_patterns": {
+        "+9 9": 355
+      },
+      "min_length": 14,
+      "max_length": 14
+    },
+    {
+      "name": "city",
+      "semantic_type": "geo_location",
+      "semantic_confidence": 0.7,
+      "dtype": "string",
+      "row_count": 355,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 8,
+      "duplicate_count": 347,
+      "unique_ratio": 0.0225,
+      "cardinality": "low",
+      "top_values": {
+        "Bengaluru": 50,
+        "Pune": 50,
+        "Rajkot": 46,
+        "Vadodara": 46,
+        "Surat": 44
+      },
+      "top_patterns": {
+        "Aa": 355
+      },
+      "min_length": 4,
+      "max_length": 9
+    },
+    {
+      "name": "created_at",
+      "semantic_type": "date",
+      "semantic_confidence": 0.986,
+      "dtype": "string",
+      "row_count": 355,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 280,
+      "duplicate_count": 75,
+      "unique_ratio": 0.7887,
+      "cardinality": "high",
+      "top_values": {
+        "2022-04-04": 3,
+        "2022-03-12": 3,
+        "2022-12-05": 3,
+        "2023-04-19": 3,
+        "2022-06-18": 3
+      },
+      "top_patterns": {
+        "9-9-9": 355
+      },
+      "invalid_dates": 5,
+      "min": "2022-01-02 00:00:00",
+      "max": "2023-11-30 00:00:00"
+    },
+    {
+      "name": "total_spent",
+      "semantic_type": "currency",
+      "semantic_confidence": 0.7,
+      "dtype": "float",
+      "row_count": 355,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 355,
       "duplicate_count": 0,
       "unique_ratio": 1.0,
       "cardinality": "unique",
       "top_values": {
-        "2025-01-02": 1,
-        "2025-01-03": 1,
-        "2025-01-05": 1,
-        "2025-01-06": 1
+        "1154.89": 1,
+        "197.5": 1,
+        "-1034.25": 1,
+        "1427.04": 1,
+        "1425.46": 1
       },
       "top_patterns": {
-        "9-9-9": 4
+        "9.9": 352,
+        "-9.9": 3
       },
-      "invalid_dates": 0,
-      "min": "2025-01-02 00:00:00",
-      "max": "2025-01-06 00:00:00"
+      "min": -3124.09,
+      "max": 4983.33,
+      "mean": 2404.7674,
+      "std": 1488.2796,
+      "skew": -0.111,
+      "extreme_outliers": 0,
+      "distribution": "roughly_symmetric"
     }
   ],
   "sample": [
     {
-      "client_ref": "101",
-      "amount": "500",
-      "date": "2025-01-02"
+      "customer_id": "1001",
+      "full_name": "Sneha Shah",
+      "email": "sneha.shah1001@mail.com",
+      "phone": "+91 9896233790",
+      "city": "Mumbai",
+      "created_at": "2022-09-08",
+      "total_spent": "1154.89"
     },
     {
-      "client_ref": "102",
-      "amount": "900",
-      "date": "2025-01-03"
+      "customer_id": "1002",
+      "full_name": "Rahul Sen",
+      "email": "rahul.sen1002@mail.com",
+      "phone": "+91 9193349856",
+      "city": "Delhi",
+      "created_at": "2022-02-02",
+      "total_spent": "197.5"
     },
     {
-      "client_ref": "101",
-      "amount": "300",
-      "date": "2025-01-05"
+      "customer_id": "1003",
+      "full_name": "Meera Gandhi",
+      "email": "meera.gandhi1003@mail.com",
+      "phone": "+91 9642621108",
+      "city": "Ahmedabad",
+      "created_at": "2023-07-29",
+      "total_spent": "-1034.25"
     },
     {
-      "client_ref": "104",
-      "amount": "150",
-      "date": "2025-01-06"
+      "customer_id": "1004",
+      "full_name": "Gaurav Rao",
+      "email": "gaurav.rao1004@mail.com",
+      "phone": "+91 9336696312",
+      "city": "Bengaluru",
+      "created_at": "2023-08-27",
+      "total_spent": "1427.04"
+    },
+    {
+      "customer_id": "1005",
+      "full_name": "Asha Thakkar",
+      "email": "asha.thakkar1005@mail.com",
+      "phone": "+91 9849621470",
+      "city": "Rajkot",
+      "created_at": "2022-12-15",
+      "total_spent": "1425.46"
     }
   ],
   "fingerprint": {
-    "schema_hash": "cde27b2a371658d5",
+    "schema_hash": "faf0f3ca8acbc012",
     "duplicate_rows": 0,
     "candidate_keys": [
-      "amount",
-      "date"
+      "customer_id",
+      "total_spent"
     ],
     "semantic_summary": {
-      "currency": 1,
+      "phone": 1,
+      "geo_location": 1,
       "identifier": 1,
-      "date": 1
+      "date": 1,
+      "email": 1,
+      "person_name": 1,
+      "currency": 1
     },
-    "quality_score": 100.0,
-    "quality_issues": []
+    "quality_score": 98.0,
+    "quality_issues": [
+      "created_at: 5 invalid dates"
+    ]
   },
   "ingestion_status": "completed"
 }

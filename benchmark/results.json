@@ -1,0 +1,116 @@
+{
+ "A. Schema matching": {
+  "exact name": {
+   "tp": 7,
+   "fp": 0,
+   "fn": 12,
+   "precision": 1.0,
+   "recall": 0.368,
+   "f1": 0.538
+  },
+  "fuzzy name >=0.8": {
+   "tp": 8,
+   "fp": 1,
+   "fn": 11,
+   "precision": 0.889,
+   "recall": 0.421,
+   "f1": 0.571
+  },
+  "hybrid >=0.6": {
+   "tp": 16,
+   "fp": 52,
+   "fn": 3,
+   "precision": 0.235,
+   "recall": 0.842,
+   "f1": 0.368
+  },
+  "hybrid >=0.7": {
+   "tp": 14,
+   "fp": 6,
+   "fn": 5,
+   "precision": 0.7,
+   "recall": 0.737,
+   "f1": 0.718
+  },
+  "hybrid >=0.8": {
+   "tp": 11,
+   "fp": 0,
+   "fn": 8,
+   "precision": 1.0,
+   "recall": 0.579,
+   "f1": 0.733
+  },
+  "hybrid >=0.9": {
+   "tp": 7,
+   "fp": 0,
+   "fn": 12,
+   "precision": 1.0,
+   "recall": 0.368,
+   "f1": 0.538
+  }
+ },
+ "B. Foreign-key discovery": {
+  "fixed pipeline (all candidates)": {
+   "tp": 6,
+   "fp": 3,
+   "fn": 0,
+   "precision": 0.667,
+   "recall": 1.0,
+   "f1": 0.8
+  },
+  "agent (validated only)": {
+   "tp": 6,
+   "fp": 3,
+   "fn": 0,
+   "precision": 0.667,
+   "recall": 1.0,
+   "f1": 0.8
+  }
+ },
+ "C. Entity resolution (pairwise)": {
+  "fixed pipeline": {
+   "tp": 330,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "agent run": {
+   "tp": 330,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  }
+ },
+ "D. Anomaly detection (file, column, type)": {
+  "fixed pipeline": {
+   "tp": 4,
+   "fp": 3,
+   "fn": 0,
+   "precision": 0.571,
+   "recall": 1.0,
+   "f1": 0.727
+  },
+  "agent run": {
+   "tp": 4,
+   "fp": 3,
+   "fn": 0,
+   "precision": 0.571,
+   "recall": 1.0,
+   "f1": 0.727
+  }
+ },
+ "F. Lineage (undirected pair detection)": {
+  "evidence-based": {
+   "tp": 1,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.333,
+   "recall": 1.0,
+   "f1": 0.5
+  }
+ }
+}

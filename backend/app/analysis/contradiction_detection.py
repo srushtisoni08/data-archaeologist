@@ -60,6 +60,8 @@ def detect_contradictions(profiles: list[dict], discovery: dict) -> list[dict]:
                   else (rel["target_column"], rel["source_column"]))
         cols = []
         for m in by_pair.get(pair, []):
+            if m["confidence"] < 0.8:
+                continue
             ca, cb = ((m["source_column"], m["target_column"]) if m["source_dataset"] == a
                       else (m["target_column"], m["source_column"]))
             if ca == ka or cb == kb:

@@ -26,23 +26,24 @@ def analyze(G: nx.MultiDiGraph) -> dict:
 def to_flow(G: nx.MultiDiGraph, level: str = "all") -> dict:
     """React Flow payload. level: 'datasets' hides column nodes and 'contains' edges."""
     keep = {n for n, d in G.nodes(data=True) if level == "all" or d["kind"] != "column"}
-    pos, cols = {}, {}
+    pos, cols, ecount = {}, {}, 0
     for n, d in G.nodes(data=True):
         if d["kind"] == "dataset":
-            pos[n] = (len(cols) * 380, 0)
+            pos[n] = (len(cols) * 520, 0)
             cols[n] = 0
     for n, d in G.nodes(data=True):
         if d["kind"] == "column":
             i = cols[d["dataset"]] = cols[d["dataset"]] + 1
             pos[n] = (pos[d["dataset"]][0], 110 + i * 56)
         elif d["kind"] == "entity":
-            pos[n] = (len([x for x in pos if x.startswith("E-")]) * 160, -180)
+            pos[n] = (ecount * 200, -200)
+            ecount += 1
     nodes = [{"id": n, "type": d["kind"], "position": {"x": pos.get(n, (0, 0))[0], "y": pos.get(n, (0, 0))[1]},
               "data": {k: v for k, v in d.items() if k != "kind"} | {"kind": d["kind"]}}
              for n, d in G.nodes(data=True) if n in keep]
     edges = []
     for i, (u, v, d) in enumerate(G.edges(data=True)):
-        if u in keep and v in keep and not (level == "datasets" and d["rel"] == "contains"):
+        if u in keep and v in keep and d["rel"] != "contains":
             edges.append({"id": f"e{i}", "source": u, "target": v, "label": d["rel"],
                           "animated": d["provenance"] == "inferred" and d["rel"] in ("references", "derived_from"),
                           "data": d})

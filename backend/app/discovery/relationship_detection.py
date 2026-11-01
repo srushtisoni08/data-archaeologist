@@ -1,3 +1,4 @@
+from collections import defaultdict
 from itertools import permutations
 from app.discovery.common import norm_values, completed
 from app.discovery.schema_matching import name_sim
@@ -11,16 +12,38 @@ def _group(dtype: str) -> str:
     return "num" if dtype in ("integer", "float") else dtype
 
 
+def _mark_dominated(out: list[dict], pv: dict) -> None:
+    key = lambda r: (r["source_dataset"], r["source_column"], r["target_dataset"], r["target_column"])
+    by_key = {key(r): r for r in out}
+    versions = {frozenset((r["source_dataset"], r["target_dataset"])) for r in out if r["cardinality"] == "one_to_one"}
+    by_child = defaultdict(list)
+    for r in out:
+        by_child[(r["target_dataset"], r["target_column"])].append(r)
+    for r in out:
+        cov = r["evidence"]["referential_coverage"]
+        rev = by_key.get((r["target_dataset"], r["target_column"], r["source_dataset"], r["source_column"]))
+        if rev and rev["evidence"]["referential_coverage"] > cov:
+            r["dominated_by"] = f"reverse direction {rev['source_dataset']}.{rev['source_column']}"
+            continue
+        sp = pv[(r["source_dataset"], r["source_column"])]
+        for q in by_child[(r["target_dataset"], r["target_column"])]:
+            qp = pv[(q["source_dataset"], q["source_column"])]
+            if (q is not r and sp < qp and q["evidence"]["referential_coverage"] > cov
+                    and frozenset((r["source_dataset"], q["source_dataset"])) not in versions):
+                r["dominated_by"] = f"{q['source_dataset']}.{q['source_column']}"
+                break
+
+
 def detect_relationships(profiles: list[dict]) -> list[dict]:
     profiles = completed(profiles)
-    out = []
+    out, pv = [], {}
     for parent, child in permutations(profiles, 2):
         for pc in parent["columns"]:
-            # parent candidate: unique, no nulls, not a flag/category
             if pc["unique_ratio"] < 0.98 or pc["null_count"] > 0 or pc["unique_count"] < 2 \
-            or pc["semantic_type"] in SKIP_PARENT:
+               or pc["semantic_type"] in SKIP_PARENT:
                 continue
             pvals = set(norm_values(parent["dataset_id"], pc["name"]))
+            pv[(parent["dataset_id"], pc["name"])] = pvals
             for cc in child["columns"]:
                 if _group(pc["dtype"]) != _group(cc["dtype"]) or cc["semantic_type"] in SKIP_SEMANTIC:
                     continue
@@ -54,4 +77,5 @@ def detect_relationships(profiles: list[dict]) -> list[dict]:
                     "status": "inferred",
                     "needs_review": coverage < 1.0 or conf < 0.8,
                 })
+    _mark_dominated(out, pv)
     return sorted(out, key=lambda r: -r["confidence"])

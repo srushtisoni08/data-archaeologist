@@ -6,7 +6,7 @@ import pandas as pd
 from app.discovery.common import get_df, completed
 
 W = {"name": 0.50, "email": 0.35, "phone": 0.15}
-SAME, UNSURE = 0.90, 0.60
+SAME, UNSURE = 0.90, 0.75
 BLOCK_MAX = 300
 
 

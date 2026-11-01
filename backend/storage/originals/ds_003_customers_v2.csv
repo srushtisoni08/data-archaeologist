@@ -1,6 +1,0 @@
-customer_id,full_name,email,city,created_at,total_spent
-101,Asha Patel,asha@mail.com,Ahmedabad,2023-01-02,1500.50
-102,Riya Shah,riya@mail.com,Vadodara,2023-02-11,900
-103,Neha Desai,neha@mail.com,Vadodara,2023-03-05,2200.75
-104,Kiran Mehta,kiran@mail.com,Rajkot,2023-04-09,300
-105,A. Patel,asha@mail.com,Ahmedabad,2023-13-45,-50

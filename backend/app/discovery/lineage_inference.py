@@ -108,6 +108,8 @@ def infer_lineage(profiles: list[dict], discovery: dict) -> dict:
         seen.add((a, b))
         ka, kb = ((r["source_column"], r["target_column"]) if r["source_dataset"] == a
                   else (r["target_column"], r["source_column"]))
-        edges.append(_edge(profs, ms[(a, b)], a, b, ka, kb))
+        e = _edge(profs, ms[(a, b)], a, b, ka, kb)
+        if e["evidence"]["schema_overlap"] >= 0.5:
+            edges.append(e)
     return {"edges": sorted(edges, key=lambda e: -e["relatedness"]), "observed": [],
             "temporal_hints": _temporal(discovery["relationships"]), "caveat": CAVEAT}

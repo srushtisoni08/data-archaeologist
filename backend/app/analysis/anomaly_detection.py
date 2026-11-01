@@ -19,6 +19,9 @@ def _add(out, ds, col, kind, sev, count, examples, detail):
 
 def detect_anomalies(profiles: list[dict], relationships: list[dict]) -> list[dict]:
     out, now = [], pd.Timestamp.now()
+    fk_children = {(r["target_dataset"], r["target_column"]) for r in relationships
+                   if r["relationship_type"] == "possible_foreign_key" and r["cardinality"] == "one_to_many"
+                   and not r.get("dominated_by")}
     for p in completed(profiles):
         ds, df = p["dataset_id"], get_df(p["dataset_id"])
         d = int(df.duplicated().sum())
@@ -50,14 +53,15 @@ def detect_anomalies(profiles: list[dict], relationships: list[dict]) -> list[di
                     o = nn[(nn < q1 - 3 * iqr) | (nn > q3 + 3 * iqr)]
                     if len(o):
                         _add(out, ds, name, "extreme_outlier", "medium", len(o), o, "Beyond 3x IQR from quartiles")
-            if sem == "identifier" and 0.9 <= c["unique_ratio"] < 1:
+            if sem == "identifier" and 0.9 <= c["unique_ratio"] < 1 and (ds, name) not in fk_children:
                 dups = nn[nn.duplicated(keep=False)].unique()
                 _add(out, ds, name, "duplicate_identifier", "high", len(dups), dups,
                      "Identifier column is almost unique but has repeats")
     for r in relationships:
         e = r["evidence"]
         if r["relationship_type"] == "possible_foreign_key" and r["cardinality"] == "one_to_many" \
-           and e["orphan_values"] and e.get("parent_semantic_type") == "identifier":        
+           and e["orphan_values"] and e.get("parent_semantic_type") == "identifier" \
+           and not r.get("dominated_by"):
             _add(out, r["target_dataset"], r["target_column"], "broken_reference",
                  "high" if e["referential_coverage"] >= 0.9 else "medium", e["orphan_values"],
                  e["orphan_examples"],

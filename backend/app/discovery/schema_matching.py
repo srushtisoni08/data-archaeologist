@@ -91,6 +91,13 @@ def match_columns(profiles: list[dict]) -> list[dict]:
                     comp["semantic"] = float(np.dot(emb[(pa["dataset_id"], ca["name"])],
                                                     emb[(pb["dataset_id"], cb["name"])]))
                 score = sum(W[k] * max(0.0, comp[k]) for k in W)
+                if ca["semantic_type"] == "identifier" and cb["semantic_type"] == "identifier":
+                    va = set(norm_values(pa["dataset_id"], ca["name"]))
+                    vb = set(norm_values(pb["dataset_id"], cb["name"]))
+                    ov = len(va & vb) / max(min(len(va), len(vb)), 1)
+                    comp["overlap"] = ov
+                    if ov >= 0.8:
+                        score = max(score, 0.5 * score + 0.5 * ov)
                 if score >= MIN_SCORE:
                     out.append({
                         "source_dataset": pa["dataset_id"], "source_column": ca["name"],

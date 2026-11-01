@@ -53,7 +53,7 @@ def detect_semantic_type(col: str, s: pd.Series) -> tuple[str, float]:
                 return "date", round(float(ratio), 3)
 
     unique_ratio = s.nunique() / len(s)
-    if hint == "identifier" and unique_ratio > 0.5:
+    if hint == "identifier" and (unique_ratio > 0.5 or pd.api.types.is_integer_dtype(s)):
         return "identifier", 0.8
     if hint in ("person_name", "geo_location") and not pd.api.types.is_numeric_dtype(s):
         return hint, 0.7

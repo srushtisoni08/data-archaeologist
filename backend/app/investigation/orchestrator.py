@@ -7,7 +7,7 @@ from app.investigation.tools import Ctx, REGISTRY
 from app.investigation.evidence import EvidenceStore
 from app.investigation.hypothesis import build_hypotheses, open_questions
 
-MAX_STEPS = 16
+MAX_STEPS = 45
 PERSON_TYPES = {"person_name", "email", "phone"}
 
 
@@ -31,7 +31,8 @@ def _rules_next(ctx, ev, done):
             if _key(t, {}) not in done:
                 return t, {}, why
         rels = _last(ev, "detect_relationships")
-        for r in (rels["result"]["relationships"][:6] if rels else []):
+        cands = [r for r in rels["result"]["relationships"] if not r.get("dominated_by")][:25] if rels else []
+        for r in cands:
             a = {"source_dataset": r["source_dataset"], "source_column": r["source_column"],
                  "target_dataset": r["target_dataset"], "target_column": r["target_column"]}
             if _key("validate_hypothesis", a) not in done:
