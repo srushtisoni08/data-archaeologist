@@ -1,0 +1,184 @@
+
+PROJECT: Data Archaeologist
+CATEGORY: Research & Discovery
+TYPE: AI-Powered Data Investigation System
+
+==================================================
+1. PROJECT PURPOSE
+==================================================
+
+Data Archaeologist is an evidence-driven system designed
+to investigate unknown collections of structured datasets.
+
+It helps users understand datasets whose relationships,
+origins, schemas and inconsistencies are undocumented.
+
+Instead of requiring users to manually inspect multiple
+CSV, Excel, JSON, JSONL and Parquet files, the system
+automatically profiles, analyses and connects them.
+
+Its goal is to reconstruct the hidden history and
+relationships of unknown data.
+
+==================================================
+2. PROBLEM BEING SOLVED
+==================================================
+
+Organizations often maintain multiple datasets without
+proper documentation or reliable data lineage.
+
+This creates problems such as:
+
+- Unknown relationships between datasets.
+- Renamed or inconsistent column names.
+- Duplicate entities across different files.
+- Conflicting values between records.
+- Broken foreign-key references.
+- Undetected anomalies and invalid records.
+- Unclear transformation history and data lineage.
+
+Data Archaeologist addresses these problems through
+automated discovery, evidence collection and investigation.
+
+==================================================
+3. CORE CAPABILITIES
+==================================================
+
+1. Dataset Profiling
+   - Detect data types and semantic types.
+   - Analyse missing values, distributions and patterns.
+   - Generate dataset fingerprints.
+
+2. Schema Matching
+   - Identify semantically similar columns.
+   - Combine column names, embeddings, types and
+     statistical distributions.
+
+3. Relationship Discovery
+   - Detect potential primary and foreign keys.
+   - Measure referential coverage.
+   - Identify orphan records.
+
+4. Entity Resolution
+   - Identify possible duplicate entities.
+   - Compare names, emails and phone numbers.
+   - Separate confirmed matches from uncertain cases.
+
+5. Data Lineage Inference
+   - Discover possible relationships between file versions.
+   - Examine schema overlap and value changes.
+   - Assign confidence to inferred lineage.
+
+6. Anomaly and Contradiction Detection
+   - Detect invalid dates and negative values.
+   - Identify statistical outliers.
+   - Find conflicting information across datasets.
+
+7. AI Investigation Agent
+   - Select the next investigation tool.
+   - Examine collected evidence.
+   - Form and validate hypotheses.
+   - Explain findings in understandable language.
+
+8. Explainable Reporting
+   - Generate structured JSON, Markdown and PDF reports.
+   - Include evidence, confidence and unresolved questions.
+
+==================================================
+4. AI AGENT RESPONSIBILITIES
+==================================================
+
+The AI investigation agent should:
+
+- Understand the investigation objective.
+- Inspect available dataset profiles.
+- Choose the most relevant investigation tool.
+- Use only available dataset IDs and column names.
+- Avoid repeating previously executed tools.
+- Validate candidate relationships before concluding.
+- Explain findings using collected evidence.
+- Clearly distinguish facts from inferences.
+- Report uncertainty rather than inventing conclusions.
+
+The agent must never fabricate dataset relationships,
+claim confirmed provenance without supporting evidence,
+or present uncertain matches as verified facts.
+
+==================================================
+5. INVESTIGATION WORKFLOW
+==================================================
+
+DISCOVER
+    |
+    v
+PROFILE DATASETS
+    |
+    v
+GENERATE HYPOTHESES
+    |
+    v
+INVESTIGATE RELATIONSHIPS
+    |
+    v
+COLLECT EVIDENCE
+    |
+    v
+VALIDATE FINDINGS
+    |
+    v
+BUILD KNOWLEDGE GRAPH
+    |
+    v
+GENERATE EXPLAINABLE REPORT
+
+==================================================
+6. TECHNOLOGY STACK
+==================================================
+
+Backend:
+- Python
+- FastAPI
+- Pandas
+- NetworkX
+- Scikit-learn
+
+Frontend:
+- React
+- TypeScript
+- Vite
+- React Flow
+
+AI Integration:
+- OpenAI-compatible LLM API
+- Configurable model endpoint
+- Tool-based investigation planning
+
+Data Formats:
+- CSV
+- Excel
+- JSON
+- JSONL
+- Parquet
+
+==================================================
+7. AI DESIGN PRINCIPLES
+==================================================
+
+- Evidence before conclusions.
+- Deterministic computation for numerical analysis.
+- AI-assisted investigation planning and explanations.
+- Confidence-aware relationship discovery.
+- Human review for uncertain entity matches.
+- No fabricated provenance or unsupported claims.
+- Original uploaded datasets remain read-only.
+
+==================================================
+8. EXPECTED OUTCOME
+==================================================
+
+Transform disconnected and poorly documented datasets
+into an explainable knowledge graph of their possible
+relationships, inconsistencies and historical evolution.
+
+Data Archaeologist aims to make data investigation
+faster, more transparent and easier to understand.
