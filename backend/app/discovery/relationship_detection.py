@@ -41,7 +41,7 @@ def detect_relationships(profiles: list[dict]) -> list[dict]:
     out, pv = [], {}
     for parent, child in permutations(profiles, 2):
         for pc in parent["columns"]:
-            if pc["unique_ratio"] < 0.98 or pc["null_count"] > 0 or pc["unique_count"] < 2 \
+            if pc["unique_ratio"] < 1.0 or pc["null_count"] > 0 or pc["unique_count"] < 2 \
                or pc["semantic_type"] in SKIP_PARENT:
                 continue
             pvals = set(norm_values(parent["dataset_id"], pc["name"]))
@@ -63,7 +63,7 @@ def detect_relationships(profiles: list[dict]) -> list[dict]:
                     "source_dataset": parent["dataset_id"], "source_column": pc["name"],
                     "target_dataset": child["dataset_id"], "target_column": cc["name"],
                     "relationship_type": "possible_foreign_key",
-                    "cardinality": "one_to_one" if cc["unique_ratio"] > 0.98 else "one_to_many",
+                    "cardinality": "one_to_one" if cc["unique_ratio"] == 1.0 and cc["null_count"] == 0 else "one_to_many",
                     "confidence": round(conf, 3),
                     "evidence": {
                         "referential_coverage": round(coverage, 3),

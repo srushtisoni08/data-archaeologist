@@ -11,3 +11,4 @@ httpx
 python-dotenv
 reportlab
 networkx
+pytest

@@ -17,7 +17,7 @@ def build_fingerprint(df: pd.DataFrame, columns: list[dict]) -> dict:
     return {
         "schema_hash": schema_hash,
         "duplicate_rows": dup_rows,
-        "candidate_keys": [c["name"] for c in columns if c["unique_ratio"] > 0.98 and c["null_count"] == 0],
+        "candidate_keys": [c["name"] for c in columns if c["unique_ratio"] == 1.0 and c["null_count"] == 0],
         "semantic_summary": {t: sum(1 for c in columns if c["semantic_type"] == t)
                              for t in {c["semantic_type"] for c in columns}},
         "quality_score": round(quality, 1),

@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from app.database import store
 from app.discovery.schema_matching import match_columns
 from app.discovery.relationship_detection import detect_relationships
+from app.discovery.composite_key_detection import detect_composite_keys
 
 router = APIRouter(tags=["discovery"])
 
@@ -10,7 +11,8 @@ router = APIRouter(tags=["discovery"])
 def discover():
     profiles = store.list_profiles()
     result = {"column_matches": match_columns(profiles),
-              "relationships": detect_relationships(profiles)}
+              "relationships": detect_relationships(profiles),
+              "composite_keys": detect_composite_keys(profiles)}
     store.save_json("discovery", result)
     return result
 

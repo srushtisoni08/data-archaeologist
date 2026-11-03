@@ -71,8 +71,11 @@ def validate_hypothesis(ctx, source_dataset, source_column, target_dataset, targ
             found = [o for o in orphans if o in set(norm_values(p["dataset_id"], c["name"]))]
             if found:
                 elsewhere.append({"dataset": p["dataset_id"], "column": c["name"], "values": found})
-    verdict = ("supported" if cov >= 0.95 and uniq >= 0.98 else
-               "partially_supported" if cov >= 0.5 and uniq >= 0.98 else "rejected")
+    parent_column_profile = next(c for c in sp["columns"] if c["name"] == source_column)
+    parent_complete = parent_column_profile["null_count"] == 0
+    parent_is_unique = uniq == 1.0 and parent_complete
+    verdict = ("supported" if cov >= 0.95 and parent_is_unique else
+               "partially_supported" if cov >= 0.5 and parent_is_unique else "rejected")
     res = {"source": f"{source_dataset}.{source_column}", "target": f"{target_dataset}.{target_column}",
            "coverage": round(cov, 3), "parent_uniqueness": round(uniq, 3), "child_rows": int(len(child)),
            "orphan_count": len(orphans), "orphan_examples": orphans[:5],
