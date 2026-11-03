@@ -1,5 +1,8 @@
 train: 80 records, valid JSONL and numeric confidence
 holdout: 20 records, valid JSONL and numeric confidence
-Rewritten training-side flagged rows: 42
+Rewritten training-side flagged rows (initial pass): 42
+Final review additional rewrites: 2 (row 35 recommended_next_action; row 58 deduplication_logic hedge)
 Deferred flagged holdout rows: 9
 Disjoint split: PASS
+Candidate file promoted to training_v1.jsonl: DONE
+Candidate file deleted: DONE
