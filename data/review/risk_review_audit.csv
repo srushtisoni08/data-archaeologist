@@ -1,0 +1,52 @@
+﻿example_id,partition,review_status,decision,notes
+11,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+12,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+13,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+14,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+16,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+18,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+21,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+22,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+24,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+26,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+28,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+29,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+31,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+32,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+33,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+36,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+37,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+38,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+39,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+41,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+42,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+43,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+44,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+45,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+46,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+48,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+49,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+52,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+53,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+54,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+55,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+56,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+60,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+61,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+63,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+64,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+65,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+66,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+67,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+68,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+69,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+77,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+78,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+80,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+82,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+84,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+86,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+92,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.
+94,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+95,holdout,deferred_by_instruction,not edited,Holdout row intentionally left unchanged for independent evaluation.
+99,training,rewritten,retained,Completion rewritten to separate observations from hypotheses and remove unsupported certainty/key/imputation/deletion claims.

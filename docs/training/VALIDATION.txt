@@ -1,0 +1,5 @@
+train: 80 records, valid JSONL and numeric confidence
+holdout: 20 records, valid JSONL and numeric confidence
+Rewritten training-side flagged rows: 42
+Deferred flagged holdout rows: 9
+Disjoint split: PASS
