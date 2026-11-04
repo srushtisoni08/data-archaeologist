@@ -1,0 +1,6 @@
+output_line,action,old_confidence,new_confidence,what_changed_and_why,fields_edited
+13,soften,0.9,0.85,"Kept the directly demonstrated carrier-length and negative-transit findings, but qualified the proposed year typo because the intended date is not shown.","reasoning,confidence"
+53,soften,0.95,0.85,"Retained the schema violations, but clarified that the reported missingness pattern does not identify MAR versus MNAR or establish a mechanism from this small fragment.","finding,reasoning,confidence"
+61,soften,0.9,0.85,Separated the prompt-stated flattening/key-variance problem from the inferred ingestion-control root cause.,"finding,reasoning,confidence"
+79,soften,0.92,0.85,Replaced the unsupported zero-loss guarantee with controls that reduce risk and detect loss; the sample cannot guarantee a loss-free migration.,"reasoning,confidence"
+86,correct_and_soften,0.95,0.85,"Corrected unsupported claims: tx_id is not declared a primary key; PostgreSQL NUMERIC can represent NaN; literal NULL/UNK are semantic sentinels, not SQL NULLs; and the ETL log is not tied causally to every anomaly.","finding,reasoning,confidence"
