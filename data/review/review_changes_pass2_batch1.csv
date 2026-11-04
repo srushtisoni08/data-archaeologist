@@ -1,0 +1,11 @@
+output_line,action,old_confidence,new_confidence,what_changed_and_why,fields_edited
+7,keep,0.85,0.85,The duplicate composite key is directly shown in the sample and the prompt declares that composite key as the primary key; root cause is already labeled as an inference.,none
+25,keep,0.9,0.9,The completion explicitly states that the root cause cannot be confirmed; the remaining statements describe directly visible format inconsistencies or recommendations.,none
+32,soften,0.9,0.85,Separated directly observed malformed values from unverified explanations of migration and ingestion causes; lowered overall confidence.,"reasoning,reasoning,confidence"
+33,keep,0.85,0.85,The completion distinguishes the observed sequence/timestamp order from the two possible causes and explicitly preserves uncertainty.,none
+34,soften,0.9,0.85,Removed the unsupported claim that the column metadata is proven unreliable; the sample only demonstrates a mismatch for a suffixed value.,"reasoning,confidence"
+38,soften,0.9,0.85,Kept the observed duplicate identifiers but removed the unsupported conclusion that they prove a missing upsert implementation.,"reasoning,confidence"
+40,soften,0.9,0.85,Changed an absolute claim that normalization is prevented to the supported risk that mixed and ambiguous formats complicate normalization.,"finding,confidence"
+46,keep,0.85,0.85,The duplicate completion and Completed-to-Processing transition are directly present in the supplied sample; the possible cause for the duplicate is explicitly left unverified.,none
+50,soften,0.92,0.85,"Qualified parser impact: malformed payloads can cause parse errors, but dropping records depends on pipeline handling; lowered confidence.","finding,reasoning,confidence"
+52,soften,0.9,0.85,Replaced an unsupported statistical claim with the directly observed magnitude and an appropriately qualified assessment.,"reasoning,confidence"

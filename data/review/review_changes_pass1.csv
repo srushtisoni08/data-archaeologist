@@ -1,0 +1,35 @@
+﻿output_line,action,old_confidence,new_confidence,what_changed_and_why,fields_edited
+13,LOWER_CONF,1.0,0.9,"Arithmetic (-361 days, -118.3 avg) proven; root cause 'typo in year' is inferred, not provable.",confidence only
+36,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+41,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+56,SOFTEN,1.0,0.9,'Null constraint violation' not stated in schema (only FK/int rules); reworded to missing role assignment.,"finding,evidence"
+57,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+67,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+78,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+130,SOFTEN,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated). 'confirms' reworded.",reasoning
+131,SOFTEN,1.0,0.85,"Absence of P999 is inferred from a product *sample*, not the full catalog; 'confirms' -> 'indicates'.",evidence
+132,SOFTEN,1.0,0.95,Deterministic; 'definitively proves' and 'catastrophic data loss' overstated.,"finding,reasoning"
+144,SOFTEN,1.0,0.9,Schema does not define child_id as a primary key/unique; reworded to missing identifier.,"finding,evidence"
+146,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+215,SOFTEN,1.0,0.9,"Finding claimed a uniqueness violation, but under case-sensitive collation the keys are distinct; reworded to logical duplicates.","finding,evidence"
+218,SOFTEN,1.0,0.9,Finding mislabelled the four formats ('symbol-prefix with ISO code suffix'); corrected. '$'=USD is implied by the pairing in the prompt.,finding
+221,SOFTEN,1.0,0.9,Course list is a sample; 'catalog scan confirms' overstated.,evidence
+264,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+299,SOFTEN,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated). 'verified' reworded.",finding
+308,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+333,SOFTEN,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated). 'confirm' reworded.",evidence
+414,SOFTEN,1.0,0.9,Finding double-counted 'Finish' enum under two numbered items and called event_id a primary key (schema says only non-null); rewritten.,"finding,reasoning"
+445,SOFTEN,1.0,0.9,subject_id is not defined as a primary key or non-null in the schema; reworded.,"finding,evidence"
+470,DROP,1.0,,"Finding says the three timestamps are the same moment, but its own evidence/reasoning computes 15:00, 03:00 and 10:00 UTC (not equal). Evidence also contains leaked self-correction text. Cannot be fixed by wording.",(row to be removed at final merge)
+518,SOFTEN,1.0,0.9,Schema does not say Account_ID is mandatory; 'confirming/confirmed' reworded.,"finding,evidence"
+566,SOFTEN,1.0,0.9,Schema does not state Start_Date is mandatory; reworded to missing-value anomaly; 'confirmed' softened.,"finding,evidence"
+692,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+708,SOFTEN,1.0,0.95,Finding said 'four' violations but lists five (1 null + 2 age + 1 email + 1 duplicate id); corrected count.,"finding,reasoning"
+742,SOFTEN,1.0,0.85,"Prompt has no time-of-day data, so 'overlapping' is unproven; 101's 24.0h does not exceed 24h; speculation about labor law softened.","finding,reasoning"
+766,SOFTEN,1.0,0.9,"Original verified only U1; U2 and U3 also match (checked), so finding and evidence extended to all three users.","finding,evidence"
+778,SOFTEN,1.0,0.85,Join failure is engine-dependent (some engines cast implicitly); evidence stated it as universal.,evidence
+788,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+789,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+841,SOFTEN,1.0,0.9,"Sample is consistent with, but cannot prove, that duplication explains the revenue gap; 'directly confirming' softened.",evidence
+918,LOWER_CONF,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated).",confidence only
+924,SOFTEN,1.0,0.95,"Deterministic check fully provable from the prompt; 1.0 lowered to 0.95 (sample-only, limitations already stated). 'verified/confirmed' reworded.","finding,reasoning"
