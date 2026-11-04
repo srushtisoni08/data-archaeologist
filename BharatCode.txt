@@ -1,184 +1,248 @@
+PROJECT: Data Archaeologist CATEGORY: Research & Discovery PROJECT TYPE:
+Evidence-Driven AI-Assisted Data Investigation System
 
-PROJECT: Data Archaeologist
-CATEGORY: Research & Discovery
-TYPE: AI-Powered Data Investigation System
-
-==================================================
-1. PROJECT PURPOSE
+================================================== 
+1. PROJECT OVERVIEW
 ==================================================
 
-Data Archaeologist is an evidence-driven system designed
-to investigate unknown collections of structured datasets.
+Data Archaeologist is an evidence-driven system for investigating
+collections of structured datasets whose schemas, relationships, and
+transformation history are undocumented or unclear.
 
-It helps users understand datasets whose relationships,
-origins, schemas and inconsistencies are undocumented.
+Users can upload multiple CSV, Excel, JSON, JSONL, and Parquet files.
+The system profiles the datasets, discovers candidate schema and record
+relationships, detects anomalies and cross-dataset contradictions,
+infers possible data lineage, and presents findings through an
+evidence-backed knowledge graph and structured reports.
 
-Instead of requiring users to manually inspect multiple
-CSV, Excel, JSON, JSONL and Parquet files, the system
-automatically profiles, analyses and connects them.
+The system is designed to reconstruct plausible relationships and data
+history from the available data. Its findings are inferences, not proof
+of provenance. It does not claim that a relationship or transformation
+is confirmed unless the available evidence supports that conclusion.
 
-Its goal is to reconstruct the hidden history and
-relationships of unknown data.
+Core principle: Evidence first. Conclusions second. Uncertainty must
+remain visible.
 
+================================================== 
+2. PROBLEM STATEMENT
 ==================================================
-2. PROBLEM BEING SOLVED
-==================================================
 
-Organizations often maintain multiple datasets without
-proper documentation or reliable data lineage.
+Organizations often accumulate datasets from different systems, teams,
+exports, and points in time without maintaining reliable documentation.
 
-This creates problems such as:
+As a result, analysts may not know:
 
-- Unknown relationships between datasets.
-- Renamed or inconsistent column names.
-- Duplicate entities across different files.
-- Conflicting values between records.
-- Broken foreign-key references.
-- Undetected anomalies and invalid records.
-- Unclear transformation history and data lineage.
+-   Which columns represent the same business concept when names differ.
+-   Which fields may act as primary or foreign keys.
+-   Whether records in one dataset refer to records in another.
+-   Whether two records represent the same real-world entity.
+-   Whether two files are different versions of the same underlying
+    data.
+-   Why values conflict across datasets.
+-   Which records are anomalous, invalid, or orphaned.
 
-Data Archaeologist addresses these problems through
-automated discovery, evidence collection and investigation.
+Manual investigation across many files is slow and difficult to
+reproduce. Data Archaeologist automates parts of this investigation and
+makes the evidence behind each finding inspectable.
 
-==================================================
+================================================== 
 3. CORE CAPABILITIES
 ==================================================
 
-1. Dataset Profiling
-   - Detect data types and semantic types.
-   - Analyse missing values, distributions and patterns.
-   - Generate dataset fingerprints.
+3.1 Multi-Format Data Ingestion - Accept CSV, Excel, JSON, JSONL, and
+Parquet files. - Detect file format and relevant loading details. -
+Extract dataset schemas for downstream analysis. - Keep uploaded
+originals read-only during investigation.
 
-2. Schema Matching
-   - Identify semantically similar columns.
-   - Combine column names, embeddings, types and
-     statistical distributions.
+Implementation note: Excel ingestion currently reads the first
+worksheet.
 
-3. Relationship Discovery
-   - Detect potential primary and foreign keys.
-   - Measure referential coverage.
-   - Identify orphan records.
+3.2 Dataset Profiling - Inspect columns, inferred data types, missing
+values, cardinality, distributions, and patterns. - Detect semantic
+types where supported. - Generate dataset fingerprints to help
+characterize and compare datasets.
 
-4. Entity Resolution
-   - Identify possible duplicate entities.
-   - Compare names, emails and phone numbers.
-   - Separate confirmed matches from uncertain cases.
+3.3 Schema Matching - Identify candidate columns that may represent the
+same concept despite different names. - Combine column-name similarity,
+embeddings, data types, and statistical distributions. - Use
+value-containment evidence for identifier-like columns where
+applicable. - Expose similarity as a candidate score rather than
+treating a match as automatically confirmed.
 
-5. Data Lineage Inference
-   - Discover possible relationships between file versions.
-   - Examine schema overlap and value changes.
-   - Assign confidence to inferred lineage.
+3.4 Key and Relationship Discovery - Detect candidate primary keys,
+foreign keys, and composite keys. - Evaluate uniqueness and referential
+coverage. - Identify orphan or unmatched references. - Validate
+candidate relationships before presenting stronger conclusions. -
+Distinguish candidate keys from keys explicitly declared in a source
+schema.
 
-6. Anomaly and Contradiction Detection
-   - Detect invalid dates and negative values.
-   - Identify statistical outliers.
-   - Find conflicting information across datasets.
+3.5 Entity Resolution - Find possible duplicate entities across
+datasets. - Compare available attributes such as names, emails, and
+phone numbers. - Use blocking and fuzzy comparison to reduce unnecessary
+pairwise comparisons. - Separate likely same-entity matches from
+uncertain and different cases. - Keep uncertain matches available for
+human review rather than merging them automatically.
 
-7. AI Investigation Agent
-   - Select the next investigation tool.
-   - Examine collected evidence.
-   - Form and validate hypotheses.
-   - Explain findings in understandable language.
+3.6 Data Lineage Inference - Compare files using schema overlap, key
+overlap, value changes, and filename/version signals. - Identify
+possible relationships between dataset versions. - Infer likely
+direction only when supporting ordering signals exist. - Keep lineage
+confidence appropriately limited when the evidence cannot establish
+direction or provenance.
 
-8. Explainable Reporting
-   - Generate structured JSON, Markdown and PDF reports.
-   - Include evidence, confidence and unresolved questions.
+3.7 Anomaly and Contradiction Detection - Detect configured data-quality
+issues such as invalid dates, negative values, statistical outliers, and
+broken references. - Identify conflicting values across related
+datasets. - Use supporting-field evidence when evaluating cross-dataset
+contradictions. - Report the evidence and scope of each finding; do not
+treat every unusual value as an error.
 
+3.8 Investigation Agent - Orchestrate an investigation by selecting the
+next relevant analysis tool. - Track executed tools and collected
+evidence. - Form and assess hypotheses using the available results. -
+Use deterministic Python analysis tools for numerical and
+data-validation work. - Optionally use an OpenAI-compatible LLM to help
+select the next tool and produce natural-language explanations. - Fall
+back to a deterministic rules-based planner when no LLM API key is
+configured.
+
+The LLM is not the source of numerical truth. Data calculations and
+validation are performed by the deterministic analysis pipeline.
+
+3.9 Knowledge Graph - Represent discovered datasets, candidate
+relationships, findings, and lineage as a graph. - Provide graph data to
+the React frontend for interactive inspection. - Allow users to inspect
+evidence associated with graph nodes and edges.
+
+3.10 Explainable Reports - Generate structured reports in JSON,
+Markdown, and PDF formats. - Include findings, supporting evidence,
+confidence information, and unresolved questions where available. - Make
+it possible to inspect why the system produced a finding rather than
+presenting only a final label.
+
+================================================== 
+4. INVESTIGATION WORKFLOW 
 ==================================================
-4. AI AGENT RESPONSIBILITIES
+
+DISCOVER FILES | v INGEST DATASETS | v PROFILE DATASETS | v GENERATE
+CANDIDATE HYPOTHESES | v INVESTIGATE SCHEMAS, KEYS, ENTITIES, LINEAGE,
+ANOMALIES AND CONTRADICTIONS | v COLLECT EVIDENCE | v VALIDATE CANDIDATE
+FINDINGS | v BUILD KNOWLEDGE GRAPH | v GENERATE EXPLAINABLE REPORT
+
+The workflow is iterative: evidence from one tool can guide the next
+investigation step. The system should not convert a candidate
+relationship into a confirmed fact merely because it appears in the
+graph.
+
+================================================== 
+5. AI INVESTIGATION AGENT 
 ==================================================
 
-The AI investigation agent should:
+The investigation agent coordinates tools; it does not replace
+deterministic analysis.
 
-- Understand the investigation objective.
-- Inspect available dataset profiles.
-- Choose the most relevant investigation tool.
-- Use only available dataset IDs and column names.
-- Avoid repeating previously executed tools.
-- Validate candidate relationships before concluding.
-- Explain findings using collected evidence.
-- Clearly distinguish facts from inferences.
-- Report uncertainty rather than inventing conclusions.
+Responsibilities: - Interpret the investigation objective. - Inspect
+available dataset profiles and previous tool results. - Select a
+relevant next investigation tool. - Use only dataset IDs, column names,
+and tools available in the current investigation. - Avoid repeating
+tools when their results are already available. - Base hypotheses and
+explanations on collected evidence. - Distinguish direct observations,
+computed results, and inferred explanations. - State uncertainty and
+unresolved questions explicitly.
 
-The agent must never fabricate dataset relationships,
-claim confirmed provenance without supporting evidence,
-or present uncertain matches as verified facts.
+Reliability constraints: - Do not fabricate dataset relationships, keys,
+lineage, or provenance. - Do not describe a candidate key as a declared
+primary key unless the source establishes that fact. - Do not present
+uncertain entity matches as verified duplicates. - Do not claim a
+transformation history that cannot be inferred from the available
+evidence. - Do not let an LLM invent numerical results; calculations
+must come from the analysis tools.
 
-==================================================
-5. INVESTIGATION WORKFLOW
-==================================================
-
-DISCOVER
-    |
-    v
-PROFILE DATASETS
-    |
-    v
-GENERATE HYPOTHESES
-    |
-    v
-INVESTIGATE RELATIONSHIPS
-    |
-    v
-COLLECT EVIDENCE
-    |
-    v
-VALIDATE FINDINGS
-    |
-    v
-BUILD KNOWLEDGE GRAPH
-    |
-    v
-GENERATE EXPLAINABLE REPORT
-
-==================================================
+================================================== 
 6. TECHNOLOGY STACK
 ==================================================
 
-Backend:
-- Python
-- FastAPI
-- Pandas
-- NetworkX
-- Scikit-learn
+Backend: - Python - FastAPI - Pandas - NetworkX - Scikit-learn
 
-Frontend:
-- React
-- TypeScript
-- Vite
-- React Flow
+Frontend: - React - TypeScript - Vite - React Flow
 
-AI Integration:
-- OpenAI-compatible LLM API
-- Configurable model endpoint
-- Tool-based investigation planning
+AI Integration: - Optional OpenAI-compatible LLM endpoint - Configurable
+API key, base URL, and model - Tool-based investigation orchestration -
+Deterministic rules-based planner fallback
 
-Data Formats:
-- CSV
-- Excel
-- JSON
-- JSONL
-- Parquet
+Supported Input Formats: - CSV - Excel - JSON - JSONL - Parquet
 
-==================================================
-7. AI DESIGN PRINCIPLES
+Report Formats: - JSON - Markdown - PDF
+
+================================================== 
+7. BENCHMARKING AND CURRENT EVIDENCE 
 ==================================================
 
-- Evidence before conclusions.
-- Deterministic computation for numerical analysis.
-- AI-assisted investigation planning and explanations.
-- Confidence-aware relationship discovery.
-- Human review for uncertain entity matches.
-- No fabricated provenance or unsupported claims.
-- Original uploaded datasets remain read-only.
+The project includes a synthetic benchmark built from related
+company-style datasets with deliberately injected data-quality issues.
+The benchmark has a separate ground-truth file that is not provided to
+the investigation system during analysis.
 
+The recorded benchmark results include: - Hybrid schema matching at the
+selected threshold: precision 1.0, recall 1.0, F1 1.0 on the
+benchmark. - Foreign-key discovery with the deterministic validation
+step: precision 1.0, recall 1.0 on the benchmark. - Entity-resolution
+pairwise evaluation: precision 1.0, recall 1.0 on the benchmark, with
+uncertain candidate links retained for review. - Injected anomalies: 4
+of 4 detected, with no false positives in the benchmark. - Injected
+contradictions: all 25 city conflicts, 5 invalid-date conflicts, and 3
+negative-total-spent cases detected as expected. - Lineage: the
+benchmark lineage pair was found with the expected direction and no
+additional edges.
+
+These are benchmark-specific results, not a guarantee of performance on
+arbitrary real-world datasets.
+
+Important limitations: - The benchmark is synthetic and was created by
+the project author. - Thresholds were tuned using the base benchmark;
+therefore, perfect scores must not be presented as independent proof of
+generalization. - The holdout changes the random seed and column names
+but retains the underlying data structure. - Real-world performance on
+unrelated, messy organizational datasets has not yet been established. -
+The selected schema-matching threshold is an operating trade-off;
+lowering it can introduce false matches, while raising it can reduce
+recall. - Foreign-key precision improves through deterministic
+validation, not through an LLM. - Agent-versus-LLM planning quality has
+not been independently evaluated. - Lineage direction can remain
+uncertain when filename/version ordering evidence is absent. - Uncertain
+entity links require human review. - Excel ingestion currently reads
+only the first worksheet. - Current storage is file/JSON based and
+intended for a single-user local workflow; authentication and a
+production database are not included.
+
+================================================== 
+8. DESIGN PRINCIPLES
 ==================================================
-8. EXPECTED OUTCOME
+
+-   Evidence before conclusions.
+-   Deterministic computation for numerical analysis and validation.
+-   AI assistance for investigation orchestration and explanations.
+-   Confidence-aware discovery rather than binary claims unsupported by
+    evidence.
+-   Human review for ambiguous entity matches and uncertain findings.
+-   Explicit separation of observed facts, computed evidence, and
+    inferred hypotheses.
+-   Read-only handling of original uploaded datasets.
+-   Transparent limitations and reproducible benchmark evaluation.
+
+================================================== 
+9. EXPECTED OUTCOME
 ==================================================
 
-Transform disconnected and poorly documented datasets
-into an explainable knowledge graph of their possible
-relationships, inconsistencies and historical evolution.
+Data Archaeologist turns disconnected structured datasets into an
+inspectable map of their possible relationships, key structures, entity
+matches, lineage, anomalies, and contradictions.
 
-Data Archaeologist aims to make data investigation
-faster, more transparent and easier to understand.
+It helps investigators move from manual file inspection to a repeatable
+evidence-driven workflow, while keeping uncertainty visible and
+preserving the distinction between what the data demonstrates and what
+the system merely infers.
+
+The intended result is not an unquestionable automated verdict. It is a
+traceable investigation that helps a human understand the data, evaluate
+the evidence, and decide what to trust.
