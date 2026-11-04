@@ -1,0 +1,101 @@
+output_line,verdict(ok/fix/drop),notes,prompt_start
+96,,,# Data Quality Analysis and Cleaning Plan  ## Context You are analyzing a database table named 'Customer_Age' which cont
+122,,,"I have a partial schema for an E-commerce database: - Users [user_id (PK), email] - Orders [order_id (PK), user_id (FK),"
+136,,,Perform a forensic investigation on the following synthetic central bank currency circulation dataset to estimate worldw
+139,,,# Real-Time Data Monitoring: Schema Drift Analysis  ## Context Real-time data monitoring is failing due to schema drift.
+150,,,# Role Act as a Senior Data Engineer specializing in legacy financial system migrations.  # Context A legacy financial l
+153,,,# Role Act as a Senior Data Engineer and Analytics Specialist specializing in Market Basket Analysis and legacy system m
+154,,,# Lottery Draw Data Analysis and Cleaning Plan  ## Context A lottery draw analysis process is failing due to schema erro
+165,,,You are an expert data ethicist and analyst. Conduct a comprehensive ethical data evaluation of the `demographic_survey`
+168,,,# Task: Stock Price Data Anomaly Detection and Cleaning  You are a data quality expert. Analyze the provided 'Stock_Pric
+171,,,Act as a biostatistician to review the following trauma registry fragment. The dataset contains specific coding errors i
+172,,,"# Role: Metabolomics Data Expert  You are an expert in metabolomics data processing, specializing in pipeline validation"
+173,,,# Role: Forensic Data Engineer  ## Task Overview Investigate inconsistent sensor telemetry data from an IoT fleet upgrad
+174,,,You are a data engineering expert specializing in data cleaning and regex pattern matching. Your task is to analyze a re
+176,,,# Task: Legacy HR Data Schema Analysis and Normalization Strategy  ## Context You are analyzing a legacy HR system expor
+182,,,I am curating a dataset of 3D aviation models and need to verify the integrity of metadata extracted from a legacy JSON 
+183,,,Act as a Senior Big Data Architect specializing in Delta Lake. Conduct a forensic evaluation of the following schema evo
+187,,,I'm investigating a potential schema evolution issue in our legacy 'orders_2019' and current 'transactions_2024' tables.
+192,,,# Task: Data Quality Analysis of Employee Records  Analyze the provided 'Employee_Records' fragment to identify semantic
+197,,,# Role You are a Data Quality Specialist tasked with resolving inconsistencies in tenant information extracted from prop
+202,,,# Role Act as a Spreadsheet Architect specializing in financial data integrity. Your task is to examine the provided fin
+204,,,# Task: Telemetry Data Null Value Analysis and Strategy  ## Scenario You are analyzing a telemetry dataset where missing
+211,,,You are a data engineering expert specializing in sports analytics and data quality assurance. Analyze the following bas
+216,,,# Role: Data Archaeologist Act as a Data Archaeologist specializing in the recovery and restoration of corrupted aviatio
+217,,,# Task: Exoplanet Data Schema Anomaly Analysis and Remediation  You are a data engineering expert specializing in astron
+224,,,# Task: Social Media Data Schema Normalization and Cleaning  You are a data engineering expert analyzing a social media 
+232,,,I'm investigating a potential schema drift issue between our Q3 `user_events` and Q4 `user_activity` logs. I need you to
+243,,,# Task: Sales Commission Data Standardization and Validation  ## Context You are analyzing a 'Sales_Performance' dataset
+257,,,# Role Act as a Senior Data Engineer specializing in temporal data normalization and geospatial integrity. You are taske
+267,,,# Role Act as an Environmental Informatics Scientist specializing in oceanographic data quality assurance.  # Context Yo
+284,,,# Role Act as a Senior Project Management Data Analyst specializing in schedule normalization and critical path analysis
+302,,,"In verifying the provenance of these 3D scanned maritime artifacts, the metadata repository shows signs of schema evolut"
+315,,,You are a specialist in matching algorithms and workforce analytics. Perform a forensic evaluation of the provided `cand
+316,,,# Task: Analyze Temporal Anomalies in User Activity Data  You are a data quality expert. Analyze the provided 'User_Acti
+340,,,# Task: Email Schema Profiling and Canonicalization  ## Context Analyze a dataset where the `email` column contains pote
+364,,,# Task: Analyze and Clean Inverted Session Times  ## Context You are analyzing a dataset of user sessions containing `Se
+369,,,# Task: Data Normalization and Semantic Mapping Analysis  Analyze the provided dataset fragment from the `ticket_system`
+370,,,# Task: Statistical Data Preprocessing and Modeling Strategy  Analyze the provided dataset characteristics and propose a
+379,,,# Role You are a Senior Data Engineer specializing in manufacturing telemetry and data quality assurance.  # Context A m
+405,,,# Role You are a senior bioinformatics data engineer and statistical analyst specializing in proteomic dataset integrity
+416,,,# Task: Detect and Resolve Semantic Overloading in Data Columns  ## Context You are analyzing a dataset where the `categ
+428,,,# Task: Weather Station Data Quality Analysis  Analyze the provided weather station dataset fragment to identify sensor 
+430,,,# Role Act as a Senior Data Engineer and SaaS Metrics Specialist.  # Context & Problem Statement Our SaaS subscription m
+442,,,Act as a computational linguist analyzing a text corpus with corrupted entity extraction metadata.   **Corrupted Data Sc
+453,,,Act as a digital archaeologist curating asset metadata. Your task is to validate an inventory of 3D model uploads contai
+458,,,You are an expert bioinformatician tasked with resolving schema drift in genomic variant calling data. The following VCF
+463,,,"# Forensic Audit of Payment Gateway Log  Conduct a forensic audit on the provided 'Payment_Gateway' log fragment, which "
+472,,,# Task: Investigate and Clean 'Phantom' Nulls in SQL Dataset  ## Context Analyze the `user_profiles` table where the `co
+500,,,# Motorsports Data Quality and Analysis Task  ## Context You are analyzing motorsports telemetry data with the following
+528,,,# Role You are a Senior Data Engineer and Biodiversity Informatics Specialist tasked with auditing a legacy inventory fr
+534,,,You are a data engineering expert tasked with resolving failures in our executive reporting system caused by corrupted `
+537,,,Act as a digital archaeologist specializing in 3D model authentication. Analyze the provided dataset to identify schema 
+552,,,"Act as a senior data analyst specializing in commercial real estate. Your task is to review the provided tenant log, ide"
+553,,,You are tasked with forensic reconstruction of a corrupted time-series feature store. I have extracted the following met
+558,,,Act as a senior data engineer investigating a 'Zombie Schema' issue in a logistics database. A deprecated view is feedin
+561,,,# Spreadsheet Automation Schema Error Analysis  ## Context Spreadsheet automation is failing due to cell-level schema er
+563,,,# Role You are a Data Engineering Expert specializing in railway logistics and legacy system integration.  # Context I a
+570,,,# Task: Historical Geographical Data Schema Analysis and Migration Strategy  ## Context You are analyzing historical geo
+585,,,"I have found a table 'User_Profiles' with the following statistics: - Total Rows: 1,000,000 - Column 'email': 900,000 un"
+608,,,You are an expert data engineer specializing in macroeconomic data harmonization. Review the following fragment from the
+613,,,Act as a senior data scientist specializing in machine learning data quality. Perform a comprehensive feature selection 
+614,,,"You are a data engineering expert tasked with analyzing a fragment of the 'Global_Sales' table, which aggregates data fr"
+620,,,# Data Profiling and Remediation Task  ## Scenario A marketing firm is profiling 'Customer_Lead' data imported from thre
+623,,,# Role Act as a Senior Data Engineer and Fraud Detection Specialist.  # Context Banking transaction logs reveal a fraud 
+636,,,# Role You are a Data Quality Analyst specializing in luxury goods pricing and currency validation.  # Context A dataset
+641,,,# Role Act as a Senior Data Engineer specializing in pediatric metabolic studies and Electronic Health Record (EHR) data
+649,,,Analyze these two dataset fragments for a potential 'False Positive' join candidate.  Dataset 1 (Employees): - Col: `Dep
+666,,,# Task: Ecological Survival Analysis Data Quality Audit  Conduct a comprehensive data quality check on the provided ecol
+669,,,# Role Act as an expert data engineer and oceanographic analyst specializing in climate data storytelling and schema nor
+678,,,# Task: Clickstream Data Quality Analysis  Analyze the provided website clickstream data fragment to identify schema dri
+680,,,# Task: Analyze and Resolve Temporal Anomalies in Asset Depreciation Data  ## Context You are analyzing a `Company_Asset
+712,,,# Task: Forensic Analysis of Corrupted Web Server Log Fragment  ## Context You are performing a forensic check on a corr
+713,,,# Task: Analyze Telemetry Schema Evolution and Define Data Cleaning Rules  You are an expert data engineer tasked with r
+720,,,# Task: Investigate Data Truncation and Propose Schema Correction  ## Context Analyze a 'data truncation' issue in the `
+724,,,# Task: Social Media Dataset Anomaly Analysis  You are a data analyst tasked with investigating irregularities in a soci
+728,,,# Role You are a Senior Data Engineer and Machine Learning Reproducibility Specialist.  # Context We are validating a ma
+735,,,# Task: Analyze and Remediate Circular References in Employee Hierarchy  ## Context An HR system's `Employee_Hierarchy` 
+752,,,You are an expert data engineer tasked with cleaning inconsistent oceanographic climate data. Review the provided data f
+755,,,# Scenario: Retail Pharmacy Data Analysis  A retail pharmacy is analyzing the 'Prescription_Logs' dataset. This data exh
+761,,,Analyze the provided payroll dataset to identify type mismatches and semantic inconsistencies.  ### Column Profile - **E
+765,,,# Task: Forensic Analysis of Corrupted CRM CSV Export  Investigate the corrupted 'Customer_Contact' CSV export from a le
+776,,,# Task: Customer Review Data Cleaning and Analysis  ## Context You are analyzing a dataset of customer reviews where the
+783,,,"I have a CSV export from an unknown system. The header is missing. Here are the first 5 rows: ""2023-10-01"", ""USR-123"", """
+791,,,You are investigating a data drift issue in a sensor network dataset where the `reading_value` column exhibits inconsist
+810,,,"Act as a quantitative economist to audit the provided monetary system dataset, which contains malformed currency codes a"
+817,,,You are performing a forensic analysis on a telemetry dataset from an industrial IoT (Internet of Things) sensor network
+821,,,# Role Act as a Senior Data Engineer specializing in Data Lake architecture and schema evolution.  # Context You are eva
+842,,,# Role Act as an expert data auditor specializing in urban green space metrics.  # Context You are analyzing a municipal
+847,,,# Role You are an expert data auditor specializing in regulatory compliance datasets. Your task is to diagnose schema co
+866,,,# Role Act as a Senior Data Engineer specializing in data quality and pipeline reliability.  # Context Data engineering 
+876,,,I am investigating a data leak where only a partial sample of a database was recovered.   Recovered Sample: | user_id | 
+882,,,# Scenario: Forensic Data Check You are analyzing a dataset where the `amount` column contains 'curled' quotes (smart qu
+887,,,# Task: Airport Code Standardization and Risk Analysis  ## Context You are analyzing a `Flight_Data` table containing `D
+888,,,### Task: User Session Log Anomaly Analysis  Examine the provided fragment of a user session log to identify anomalies i
+890,,,# Role: Predictive Maintenance Data Analyst  You are an expert in industrial IoT data quality and machine learning prepr
+905,,,You are a data engineering expert specializing in historical dataset normalization. Analyze the following scenario regar
+906,,,You are a data engineering expert tasked with resolving schema inconsistencies in global box office data.   ### Input Da
+912,,,# Task: Data Consistency Analysis and Standardization Strategy  ## Context You are analyzing a product shipment dataset 
+931,,,# Task: Enterprise Data Schema Analysis and Standardization Strategy  ## Context Enterprise data democratization efforts
+937,,,Analyze the following data snippet for potential 'hidden' keys or composite key candidates. The dataset lacks an explici
+942,,,I am investigating a legacy billing system. I have two fragments of data from different eras of the database.   Fragment

@@ -1,0 +1,54 @@
+source_row_index,reason
+36,completion is list of 3 findings
+56,completion is list of 4 findings
+64,completion is list of 6 findings
+79,completion is list of 6 findings
+83,completion is list of 3 findings
+90,completion is list of 6 findings
+95,completion is list of 4 findings
+122,completion is list of 4 findings
+158,completion is list of 3 findings
+165,completion is list of 3 findings
+181,completion is list of 4 findings
+192,completion is list of 3 findings
+224,dict-typed finding/reasoning
+228,completion is list of 4 findings
+251,completion is list of 4 findings
+265,completion is list of 3 findings
+285,completion is list of 5 findings
+291,completion not valid JSON
+301,completion not valid JSON
+305,completion is list of 4 findings
+356,completion not valid JSON
+365,completion is list of 5 findings
+395,completion is list of 2 findings
+411,completion is list of 2 findings
+461,completion not valid JSON
+478,completion is list of 3 findings
+489,completion is list of 4 findings
+535,completion is list of 4 findings
+541,completion is list of 4 findings
+546,completion not valid JSON
+559,completion is list of 4 findings
+570,completion is list of 4 findings
+579,completion not valid JSON
+584,completion is list of 4 findings
+609,completion is list of 3 findings
+624,completion is list of 5 findings
+626,completion not valid JSON
+672,completion is list of 5 findings
+683,completion is list of 4 findings
+696,completion not valid JSON
+700,completion is list of 4 findings
+756,completion not valid JSON
+780,near-duplicate prompt
+793,completion is list of 3 findings
+796,completion is list of 4 findings
+797,completion is list of 5 findings
+856,completion not valid JSON
+876,completion is list of 4 findings
+892,completion is list of 4 findings
+944,completion is list of 5 findings
+959,completion is list of 3 findings
+983,completion is list of 3 findings
+984,completion is list of 4 findings
